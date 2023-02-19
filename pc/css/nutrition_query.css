@@ -1,0 +1,251 @@
+@import url(./global.css);
+
+.nut_wrapper{
+    height : 100%;
+    background-image: 
+        url('../source/img/nutrition_query/bg_circle.png'),
+        url('../source/img/nutrition_query/bg_p.png');
+
+    background-repeat:
+            no-repeat,
+            no-repeat;
+
+    background-position:
+            -37px 80px,
+            0 127%;
+}
+
+.nut_content{
+    width: 1280px;
+    margin: 0 auto;
+
+    padding: 80px 15px 0 15px;
+}
+
+.nut_content h2{
+    font-size: 55px;
+    font-weight: bold;
+    color: #3c6e71;
+    margin: 80px 0 40px 16px;
+}
+
+/* tab 切換 */
+
+#tab {
+    width: 1280px;
+}
+
+/* 頁籤ul */
+#tab > ul {
+    overflow: hidden;
+    margin: 0;
+    padding: 10px 20px 0 20px;
+}
+
+#tab > ul > li {
+    list-style-type: none;
+}
+
+/* 頁籤上的文字 */
+#tab > ul > li > a { 
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #889e9f;
+    float: left;
+    margin-right: 25px;
+
+    display: block;
+}
+
+/*頁籤div內容*/
+#tab > div {
+    clear: both;
+    padding: 0 22px;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.tab-content ol{
+    list-style: none;
+  }
+
+
+
+/* 第一筆的底色 */
+span:target ~ #tab > ul li:first-child a {
+    background: transparent;
+    color: #889e9f;
+
+}
+
+span:target ~ #tab > div:first-of-type {
+    visibility: hidden;
+    height: 0;
+    padding: 0 22px;
+}
+
+/*頁籤變換&第一筆*/
+span ~ #tab > ul li:first-child a,
+#tab-1:target ~ #tab > ul li a[href$="#tab-1"],
+#tab-2:target ~ #tab > ul li a[href$="#tab-2"],
+#tab-3:target ~ #tab > ul li a[href$="#tab-3"] {
+    color: #5aabaf;
+    border-radius: 5px 5px 0 0;
+}
+
+span ~ #tab > ul li:first-child a::before,
+#tab-1:target ~ #tab > ul li a[href$="#tab-1"]::before,
+#tab-2:target ~ #tab > ul li a[href$="#tab-2"]::before,
+#tab-3:target ~ #tab > ul li a[href$="#tab-3"]::before {
+    color: #5aabaf;
+    height: 100%;
+}
+
+/*頁籤內容顯示&第一筆*/
+span ~ #tab > div:first-of-type,
+#tab-1:target ~ #tab > div.tab-content-1,
+#tab-2:target ~ #tab > div.tab-content-2,
+#tab-3:target ~ #tab > div.tab-content-3 {
+    visibility: visible;
+    height: 100%;
+}
+
+span {
+    display: none;
+}
+
+.tab-content ul{
+    list-style: none;
+    padding: 30px 0;
+    display: flex;
+    flex-wrap: wrap
+  }
+  
+.tab-content li{
+    background: #fff;
+    width:336px;
+    margin: 0 20px 20px 0;
+    height: 706px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    
+    /* overflow: hidden; */
+    padding: 0 28px 28px 28px;
+  }
+
+  .tab-content li:hover{
+    box-shadow: 0px 5px 30px 3px rgba(105, 65, 198, 0.2);
+  }
+
+.product_img{
+    width: 332px;
+    height: 256px;
+    overflow: hidden;
+
+    padding: 15px;
+    position: relative;
+}
+
+.tab-content-1 .product_img > img{
+    display:block;
+    position:absolute;
+    left: -37px;
+    top: -70px;
+  }
+
+.tab-content-2 .product_img > img{
+    width: 128%;
+
+    display:block;
+    position:absolute;
+    left: -18%;
+    top: -25%;
+
+    /* clip-path: inset(27% 22% 28% 15%); */
+}
+
+.tab-content-3 .product_img > img{
+    width: 90%;
+
+    display:block;
+    position:absolute;
+    left: 9px;
+    top: -31px;
+}
+  
+.tab-content li > h4{
+    font-size: 20px;
+    font-weight: 500;
+    color: #b57be7;
+    margin-bottom: 10px;
+  }
+  
+.tab-content li > h5{
+    font-size: 18px;
+  }
+
+.tab-content h5 i{
+    margin-right: 5px;
+  }
+
+.check-circle ,.check-circle i{
+    color: #b57be7;
+}
+
+.x-circle , .x-circle i{
+    color: #a09c9c;
+}
+
+  
+  
+.tab-content li > h3{
+    font-size: 18px;
+    color: #a09c9c;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  .tab-content li > p{
+    font-size: 12.5px;
+    color: #a09c9c;
+    line-height: 1.23;
+  }
+
+table{
+    width: 100%;
+    background-color: #fff;
+    border: solid 1px #eeeaf5;
+    border-radius: 8px;
+
+    text-align: center;
+    border-collapse: separate;
+} 
+
+table:hover{
+    transform: scale(1.3); 
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    box-shadow: 0 0px 10px -2px rgb(16 24 40 / 13%), 0 0px 8px -2px rgb(16 24 40 / 20%);
+}
+
+.nutrient_title{
+    background-color: #f4f0ff;
+    color: #000;
+}
+
+.nutrient_txt{
+}
+
+.nutrient_txt{
+    line-height: 2.6;
+    border-top: solid 1px #eeeaf5;
+    border-bottom: solid 1px #eeeaf5;
+}
+
+.tab-content-3 li{
+    padding: 0 28px 45px 28px;
+}
+

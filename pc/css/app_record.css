@@ -1,0 +1,135 @@
+@import url('global.css');
+
+body{
+    min-height: 100hv;
+}
+
+.app_wrapper{
+    background-image:
+        url('../source/img/app/record_bg.png'),
+        linear-gradient(to bottom, #fff 35%, #cfbae1 82%);
+
+    background-repeat: no-repeat,no-repeat;
+    background-position:
+        left 190%,
+        0 0;
+
+    z-index: 0;
+    padding-bottom: 106px;
+}
+
+.app_wrapper .content{
+    padding-top: 80px;
+    width: 1280px;
+    margin: 0 460px 0 580px;
+
+    display: flex;
+}
+
+.content_txt{
+    width: 100%;
+    margin: 156px 0 0 10px;
+}
+
+.content_txt h1{
+    font-size: 55px;
+    font-weight: 900;
+    line-height: 1.58;
+    color: #3c6e71;
+
+    position: relative;
+    z-index: 0;
+}
+
+.content_txt h1:before{
+    position: absolute;
+    left: -28%;
+    top: -121%;
+    
+    content: '';
+
+    width: 200px;
+    height: 200px;
+
+    background-image: url('../source/img/app/tag.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    z-index: -1;
+}
+
+.content_txt h2{
+    height: 59px;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.48;
+    color: #3c6e71;
+}
+
+.content_txt ul{
+    padding-left: 25px;
+    list-style: circle;
+
+    margin: 25px 0;
+}
+
+.content_txt li{
+    font-size: 20px;
+    line-height: 1.6;
+    color: #6d7676;
+}
+
+.content_txt .button{
+    margin-top: 60px;
+    display: flex;
+}
+
+.content_txt .button a{
+    flex-direction: column;
+    margin-right: 20px;
+
+    display: block;
+    width: 150px;
+
+    padding: 10px 10px;
+    border-radius: 6px;
+    background-color: #3c6e71;
+    color: #fff;
+
+    text-decoration: none;
+    text-align: center;
+
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.content_txt .button a:last-child{
+    background-color: #ffff;
+    border: dashed 1px #3c6e71;
+    color: #3c6e71;
+}
+
+.content_txt .button a:hover{
+    background-color: #264748;;
+}
+
+.content_txt .button a:last-child:hover{
+    background-color: #daf5f7;
+}
+
+.app_img{
+    width: 100%;
+    margin-top: 108px;
+}
+
+.app_img img{
+    display: block;
+    width: 44%;
+
+    /* position: absolute; */
+    left: 0;
+    top: 0;
+
+    clip-path: inset(0% 1% 0% 0% round 42px);"
+}

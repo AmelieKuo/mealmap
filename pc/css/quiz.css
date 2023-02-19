@@ -1,0 +1,298 @@
+@import url('global.css');
+
+.quiz_wrapper{
+        background: url(../source/img/quiz/bg.png) no-repeat top center;
+        background-position: 60% bottom;
+        background-size: contain;
+        
+        min-height: calc(100vh - 100px);
+}
+
+#ContentBlock{
+    padding: 160px 0 200px 0;
+}
+
+#suittest{
+    line-height: normal;
+}
+#suittest #myForm.wrapper-in{
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 5% 25% 0 38%;
+    margin-top: -5%;
+}
+#suittest img{
+    max-width: 100%;
+}
+#suittest .rowbox{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+#suittest .group-input-row{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+#suittest .group-input-row >*{
+    margin-right: 5%;
+    flex-grow: 1;
+}
+#suittest input[type='radio'],#suittest input[type='checkbox']{
+    display: none;
+}
+#suittest input:focus{
+    outline:none
+}
+#suittest input[type='number']{
+    margin-top: 5px;
+    border: solid 3px #69b71b;
+    color: #69b71b;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px 8px;
+    line-height: 38px;
+    text-align: center;
+    min-width: 144px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+    -moz-box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+    -ms-box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+    -o-box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+#suittest .form{
+    font-size: 26px;
+    position: relative;
+}
+#suittest .circularProgressbar{
+    position: relative;
+    max-width: 280px;
+    margin: 10px 5%;
+}
+#suittest .circularProgressbar .circularProgressbar-shadow,
+#suittest .circularProgressbar .circularProgressbar-trail,
+#suittest .circularProgressbar .circularProgressbar-path{
+    stroke-width: 8;
+    fill-opacity: 0;
+}
+#suittest .circularProgressbar .circularProgressbar-shadow{
+    filter: url(#dropshadow);
+    stroke: #c3c3c3;
+}
+#suittest .circularProgressbar .circularProgressbar-trail{
+    stroke: #fff;
+}
+#suittest .circularProgressbar .circularProgressbar-path{
+    stroke: #3c6e71;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    stroke-linecap: round;
+}
+#suittest .circularProgressbar .circularProgressbar-text{
+    position: absolute;
+    top: calc(50% - 45px);
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+    color: #3c6e71;
+}
+#suittest .circularProgressbar .circularProgressbar-text .counter-count{
+    font-size: 30px;
+}
+.stxt{
+    color:#3c6e71;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+#suittest .wrapper-btn{
+    max-width: 50%;
+    margin: 30px auto;
+}
+#suittest .input-btn{
+    margin-top: 5px;
+    border: solid 3px #3c6e71;
+    color: #3c6e71;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px 10px;
+    text-align: center;
+    min-width: 60px;
+    border-radius: 10px;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    line-height: 30px;
+}
+#suittest input[type='radio']:checked+.input-btn,
+#suittest input[type='checkbox']:checked+.input-btn,
+#suittest .input-btn:hover{
+    background: #3c6e71;
+    color: #fff;
+}
+#suittest .step-list li{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+#suittest .topbanner-title{
+    position: relative;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 8px;
+    margin-bottom: 105px;
+    padding: 15px 30px;
+    border-bottom: 1px solid #000;
+}
+#suittest .topbanner-title::after{
+    position: absolute;
+    top: 0;
+    right: -60px;
+    content: url(../../images/com/suittest/time.png)
+}
+#suittest .suitBox{
+    position: relative;
+    padding: 5% 5% 5% 5%;
+    margin-bottom: 50px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+#suittest .suitBox .suitBox-title{
+    position: absolute;
+    top: -64px;
+    left: 10px;
+    color: gray;
+    font-size: 40px;
+    font-weight: bold;
+    -webkit-border-radius: 10px 5px 40px 5px;
+    -moz-border-radius: 10px 5px 40px 5px;
+    -ms-border-radius: 10px 5px 40px 5px;
+    -o-border-radius: 10px 5px 40px 5px;
+    border-radius: 10px 5px 40px 5px;
+    padding: 15px 20px;
+    letter-spacing: 4px;
+    z-index: 0;
+    overflow: hidden;
+    width: 80px;
+    height: 75px;
+}
+#suittest .suitBox .suitBox-title span{
+    font-size: 40px;
+    color: #3c6e71;
+}
+#suittest .suitBox .suitBox-content{
+    z-index: 2;
+    position: relative;
+    font-weight: bold;
+    color: #3c6e71;
+}
+#suittest .suitBox .suitBox-content .stitle{
+    font-size: 40px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    line-height: 36px;
+}
+#suittest .suitBox .suitBox-section{
+    display: block;
+    width: 100%;
+}
+#suittest .suitBox .suitBox-section[data-step=3] .input-btn{
+    display: none;
+    width: 100%;
+}
+#suittest .suitBox .suitBox-section.summary .summary-suggest{
+    margin-bottom: 12px;
+}
+#suittest .suitBox .suitBox-section.summary .suitBox-title{
+    padding: 10px;
+}
+#suittest .suitBox .suitBox-section.summary .summary-suggest .summary-title{
+    font-size: 20px;
+    color: #6bb81b;
+    margin-bottom: 12px;
+}
+#suittest .suitBox .suitBox-section.summary .summary-suggest[data-pass=false] .summary-title{
+    color: #ef761a;
+}
+#suittest .suitBox .suitBox-section.summary .summary-suggest[data-pass=false] .summary-title::before{
+    background: url(../../images/com/suittest/alert.png) center;
+}
+#suittest .suitBox .suitBox-section.summary .summary-suggest[data-pass=true][data-target=is_email]{
+    display: none;
+}
+#suittest .suitBox .suitBox-section.summary .summary-suggest[data-pass=true] .summary-tip{
+    display: none;
+}
+#suittest .suitBox .suitBox-section.summary .suitBox-buttom{
+    position: relative;
+}
+#suittest .sumit-btn{
+    position: absolute;
+    top: -30px;
+    width: 100%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    background: #fe7800;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 15px 0;
+    text-align: center;
+    min-width: 150px;
+    margin-top: 26px;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+    -moz-box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+    -ms-box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+    -o-box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+#suittest .sumit-btn:hover{
+    background: #df6900;
+}
+#suittest .suitBox .suitBox-progressbar{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 200px;
+    font-weight: bold;
+}

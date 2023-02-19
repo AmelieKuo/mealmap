@@ -1,0 +1,239 @@
+@import url('global.css');
+
+.calorie_wrapper{
+    height : 100%;
+    background-image: 
+        url('../source/img/calorie/bg_circle.png'),
+        url('../source/img/calorie/bg_p.png');
+
+    background-repeat:
+            no-repeat,
+            no-repeat;
+
+    background-position:
+            -37px 80px,
+            0 595%;
+
+    background-color:#eee ;
+}
+
+.calorie{
+    width: 1200px;
+    margin: 0 auto;
+
+    padding: 150px 15px 100px 15px;
+    text-align: center;
+
+    filter: drop-shadow(0px 0px 22px rgba(0, 0, 0, 0.25));
+}
+
+.cat_circle{
+    margin: 0 auto;
+    background: #fff;
+    width: 376px;
+    height: 188px;
+    border-radius: 188px 188px 0 0;/* 左上、右上、右下、左下 */
+
+    position: relative;
+}
+
+.cat_circle img{
+    position: absolute;
+    left: -45px;
+    top: -40px;
+    margin: 0 auto;
+}
+
+.calorie_content{
+    margin: 0 auto;
+    width: 1004px;
+    height: 900px;
+
+    background: #fff;
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+h1{
+    padding-top: 190px;
+    padding-bottom: 50px;
+    font-size: 45px;
+    font-weight: 900;
+    line-height: 1.58;
+    text-align: center;
+    color: #3c6e71;
+}
+
+.calorie_enter{
+    text-align: left;
+    padding: 0 128px;
+    
+}
+
+.calorie_output{
+    text-align: left;
+    margin-top: 30px;
+    padding: 40px 128px 200px 128px;
+    background-color: #ddf0f1;
+}
+
+h3{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 2;
+    color: #b57be7;
+}
+
+.calorie_enter input{
+    width: 100%;
+    flex-direction: row;
+    padding: 12px 16px;
+    border-radius: 4px;
+    border: solid 1px #b57be7;
+    font-size: 18px;
+    color: #b57be7;
+
+    outline : none;
+    font-size: 18px;
+}
+
+h2{
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 2;
+    color: #b57be7;
+}
+
+select{
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 4px;
+    width: 100%;
+    border: solid 1px #b57be7;
+
+    outline : none;
+
+    font-size: 18px;
+    color: #b57be7;
+}
+
+select option{
+    font-size: 18px;
+    color: #b57be7;
+}
+
+.calorie_output input{
+    height: 50px;
+    border: solid 0px #b57be7;
+    background-color: #fff;
+    font-size: 18px;
+}
+
+.calorie_enter input::placeholder {
+    color: #cfbae1;
+    font-size: 18px;
+  }
+
+@media screen and (max-width: 428px){
+
+    .body{
+        background-color: #ede5f4;
+    }
+
+    .calorie_wrapper{
+        height : 100%;
+        background-image: 
+            url(''),
+            url('');
+    
+        background-color: #ede5f4;
+    }
+    
+    .calorie{
+        width: auto;
+        margin: 0 auto;
+    
+        padding: 10px;
+        text-align: center;
+    
+        filter: drop-shadow(0px 0px 22px rgba(0, 0, 0, 0.25));
+    }
+    
+    .cat_circle{
+        margin: 0 auto;
+        background: #fff;
+        width: 190px;
+        height: 95px;
+        border-radius: 95px 95px 0 0;/* 左上、右上、右下、左下 */
+    }
+    
+    .cat_circle img{
+        width: 115%;
+        position: relative;
+        left: -15px;
+        top: -15px;
+        margin: 0 auto;
+    }
+    
+    .calorie_content{
+        margin: 0 auto;
+        width: 98%;
+        height: auto;
+    }
+    
+    h1{
+        padding-top: 120px;
+        padding-bottom: 50px;
+        font-size: 32px;
+        font-weight: 900;
+    }
+    
+    .calorie_enter{
+        text-align: left;
+        padding: 0 35px;
+        
+    }
+    
+    .calorie_output{
+        text-align: left;
+        margin-top: 30px;
+        padding: 40px 38px;
+        background-color: #ddf0f1;
+    }
+    
+    h3{
+        font-size: 18px;
+    }
+    
+    .calorie_enter input{
+        font-size: 16px;
+    }
+    
+    h2{
+        font-size: 18px;
+    }
+    
+    select{
+        font-size: 16px;
+        background: #ffff;
+    }
+    
+    select option{
+        font-size: 16px;
+        background: #ffff;
+    }
+    
+    .calorie_output input{
+        height: 50px;
+        border: solid 0px #b57be7;
+        border-radius: 4px;
+        background-color: #fff;
+        font-size: 16px;
+    }
+    
+    .calorie_enter input::placeholder {
+        color: #cfbae1;
+        font-size: 18px;
+      }
+}

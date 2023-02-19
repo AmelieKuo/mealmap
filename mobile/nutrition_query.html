@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>查詢貓罐頭營養成份｜Meal Map 智慧掌握貓的健康</title>
+        <meta name="description" content="主食罐的營養成分符合國際標準嗎？這邊查詢"/>
+
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+        
+        <link rel="icon" href="./source/img/favicon.ico" type="image/x-icon">
+        
+        <link rel="stylesheet" href="./css/nutrition_query.css">
+    </head>
+
+    <body>
+    <!-- navbar -->
+    <nav class="header" id="header">
+        <div class="nav_center">
+            <div class="left_nav">
+                <i class="bi bi-list" onclick="myFunction()";></i>
+                <a href="./index.html" class="navlogo">
+                    <img class="logo_pc" src="./source/img/logo.svg" alt="MealMap_Logo">
+                    <img class="logo_mb" src="./source/img/logo_m.svg" alt="MealMap_Logo"></a>
+                <ul id="mbNav" class="mbNav_ul">
+                    <li class="Main_LeftListLiSelector">
+                        <a href="#">營養查詢
+                            <i class="bi bi-chevron-down"></i>
+                        </a>
+
+                        <!-- 子選單 -->
+                        <ol class="menu_dropdown item1">
+                            <li>
+                                <a href="./nutrition_query.html">依品牌搜尋</a>
+                            </li>
+                            <li>
+                                <a href="./app_ai.html">掃描辨識</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li class="Main_LeftListLiSelector">
+                        <a href="#">飲食計畫
+                            <i class="bi bi-chevron-down"></i>
+                        </a>
+
+                        <!-- 子選單 -->
+                        <ol class="menu_dropdown item2">
+                            <li>
+                                <a href="./calorie.html">熱量 / 飲水量計算</a>
+                            </li>
+                            <li>
+                                <a href="./app_record.html">飲食紀錄</a>
+                            </li>
+                        </ol>
+
+                    </li>
+                    <li>
+                        <a href="./plans.html">方案</a>
+                    </li>
+                    <li>
+                        <a href="./blog.html">部落格</a>
+                    </li>
+                    <li class="mb_right_nav">
+                        <a href="#" onclick="document.getElementById('signup_overlay').style.display='block'" style="width:auto;">註冊
+                            / 登入</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right_nav">
+                <!-- <button class="header_navigation_sign-up">註冊 / 登入</button> -->
+                <button onclick="document.getElementById('signup_overlay').style.display='block'" style="width:auto;">註冊
+                    / 登入</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 註冊視窗 -->
+    <div id="signup_overlay" class="modal">
+        <form class="modal-content" action="/action_page.php">
+            <div class="container">
+                <span onclick="document.getElementById('signup_overlay').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+
+                <div class="container_left">
+                    <img src="./source/img/sign-uporlogin/Logo_Horizontal.png" alt="">
+                    <h2>
+                        <span>年繳方案</span><br>
+                        83% 限時折扣優惠
+                    </h2>
+                </div>
+                <div class="container_right">
+                    
+                    <h1>Meal Map 新朋友？<br>首次使用記得完成註冊</h1>
+
+                    <div class="other_signup">
+                        <a href="#">
+                            <img src="./source/img/sign-uporlogin/Google_logo.png" alt="">
+                        </a>
+
+                        <a href="#">
+                            <img src="./source/img/sign-uporlogin/Faceook_logo.png" alt="">
+                        </a>
+
+                        <a href="#">
+                            <img src="./source/img/sign-uporlogin/Apple_logo.png" alt="">
+                        </a>
+                    </div>
+                    <p class="hr_or">-OR-</p>
+                    <div class="input_content">
+                        <label for="email">
+                            <b>Email</b>
+                        </label>
+                        <input type="text" placeholder="請輸入 email" name="email" required="required">
+
+                        <label for="psw">
+                            <b>密碼</b>
+                        </label>
+                        <input type="password" placeholder="請輸入超過 8 位英數混合密碼" name="psw" required="required">
+
+                        <p class="consent">按下「註冊」，即表示同意
+                            <a href="#" style="color:dodgerblue">Meal Map 服務條款
+                            </a>並認可隱私政策。
+                        </p>
+
+                        <div class="clearfix">
+                            <button type="submit" class="signupbtn">立即註冊</button>
+                        </div>
+
+                        <div>
+                            <p class="p_tologin">已經有帳號了？<span class="tologin">點我登入</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+        <!-- <div class="wrapper"> -->
+        <!-- 第一屏 -->
+        <div class="nut_wrapper">
+            <div class="nut_content">
+                <h2>依品牌搜尋</h2>
+                <!-- <div class="nut_tab"> <h3><a href="">克瑞斯 CRIUS</a></h3> <h3><a href="">嘿囉
+                HALO</a></h3> <h3><a href="">汪喵星球</a></h3> </div> -->
+
+                <!-- HTML -->
+
+                <span id="tab-1">克瑞斯 CRIUS</span>
+                <span id="tab-2">嘿囉 HALO</span>
+                <span id="tab-3">汪喵星球</span>
+
+                <!-- 頁籤按鈕 -->
+                <div id="tab">
+                    <ul>
+                        <li>
+                            <a href="#tab-1">克瑞斯 CRIUS</a>
+                        </li>
+                        <li>
+                            <a href="#tab-2">嘿囉 HALO</a>
+                        </li>
+                        <li>
+                            <a href="#tab-3">CANIDAE 卡比</a>
+                        </li>
+                    </ul>
+
+                    <!-- 頁籤的內容區塊 -->
+                    <div class="tab-content tab-content-1">
+                        <!-- 克瑞斯圖片商品來源：http://www.cerespet.com/2998621697.html -->
+                        <ul>
+                            <li class="product1">
+                                <div class="product_img">
+                                    <img
+                                        src="./source/img/nutrition_query/crius_01.jpeg"
+                                        alt="">
+                                </div>
+                                <h4>天然無穀放養雞</h4>
+                                <h5 class="check-circle">
+                                    <i class="bi bi-check-circle-fill"></i>符合 AAFCO/NRC 標準</h5>
+                                <h5 class="x-circle">
+                                    <i class="bi bi-x-circle-fill"></i>蛋白質超過 30%</h5>
+                                <h5 class="x-circle">
+                                    <i class="bi bi-x-circle-fill"></i>無膠類</h5>
+                                <h3>主要成份</h3>
+                                <p class="nutrient_content">鮮肉湯、雞肉、雞肝、南瓜、啤酒酵母、羊血、魚油、碳酸鈣、焦磷酸四鈉、瓊脂、肉桂、關華豆膠、氯化鉀、維生素&礦物質、綠唇貽貝、牛磺酸、氯化膽鹼、絲蘭、輔酶Q10</p>
+                                <h3>營養標示</h3>
+                                <table>
+                                    <tr class="nutrient_title">
+                                        <td>粗蛋白</td>
+                                        <td>粗脂肪</td>
+                                        <td>粗纖維</td>
+                                        <td>灰質</td>
+                                    </tr>
+                                    <tr class="nutrient_txt">
+                                        <td>10.45%</td>
+                                        <td>5.22%</td>
+                                        <td>0.31%</td>
+                                        <td>2.53%</td>
+                                    </tr>
+                                    <tr class="nutrient_title">
+                                        <td>水分</td>
+                                        <td>鈣</td>
+                                        <td>磷</td>
+                                        <td>總熱量</td>
+                                    </tr>
+                                    <tr class="nutrient_txt">
+                                        <td>79.31%</td>
+                                        <td>0.39%</td>
+                                        <td>0.30%</td>
+                                        <td>97 大卡 / 100 克</td>
+                                    </tr>
+                                </table>
+                            </li>
+
+                            <li class="product2">
+                                <div class="product_img">
+                                    <img
+                                        src="./source/img/nutrition_query/crius_02.jpeg"
+                                        alt="">
+                                </div>
+                                <h4>天然無穀野生鮭</h4>
+                                <h5 class="check-circle">
+                                    <i class="bi bi-check-circle-fill"></i>符合 AAFCO/NRC 標準</h5>
+                                <h5 class="x-circle">
+                                    <i class="bi bi-x-circle-fill"></i>蛋白質超過 30%</h5>
+                                <h5 class="x-circle">
+                                    <i class="bi bi-x-circle-fill"></i>無膠類</h5>
+                                <h3>主要成份</h3>
+                                <p class="nutrient_content">鮮肉湯、雞肉、雞肝、南瓜、啤酒酵母、羊血、魚油、碳酸鈣、焦磷酸四鈉、瓊脂、肉桂、關華豆膠、氯化鉀、維生素&礦物質、綠唇貽貝、牛磺酸、氯化膽鹼、絲蘭、輔酶Q10</p>
+                                <h3>營養標示</h3>
+                                <table>
+                                    <tr class="nutrient_title">
+                                        <td >粗蛋白</td>
+                                        <td>粗脂肪</td>
+                                        <td>粗纖維</td>
+                                        <td>灰質</td>
+                                    </tr>
+                                    <tr class="nutrient_txt">
+                                        <td>10.21%</td>
+                                        <td>8.45%</td>
+                                        <td>0.45%</td>
+                                        <td>2.81%</td>
+                                    </tr>
+                                    <tr class="nutrient_title">
+                                        <td>水分</td>
+                                        <td>鈣</td>
+                                        <td>磷</td>
+                                        <td>總熱量</td>
+                                    </tr>
+                                    <tr class="nutrient_txt">
+                                        <td>74.02%</td>
+                                        <td>0.40%</td>
+                                        <td>0.31%</td>
+                                        <td>132.5 大卡 / 100 克</td>
+                                    </tr>
+                                </table>
+                            </li>
+
+                            <li class="product3">
+                                <div class="product_img">
+                                    <img
+                                        src="./source/img/nutrition_query/crius_03.jpeg"
+                                        alt="">
+                                </div>
+                                <h4>天然無穀低敏鴨</h4>
+                                <h5 class="check-circle">
+                                    <i class="bi bi-check-circle-fill"></i>符合 AAFCO/NRC 標準</h5>
+                                <h5 class="x-circle">
+                                    <i class="bi bi-x-circle-fill"></i>蛋白質超過 30%</h5>
+                                <h5 class="x-circle">
+                                    <i class="bi bi-x-circle-fill"></i>無膠類</h5>
+                                <h3>主要成份</h3>
+                                <p class="nutrient_content">鮮肉湯、鴨肉、雞肝、南瓜、啤酒酵母、羊血、魚油、碳酸鈣、焦磷酸四鈉、瓊脂、肉桂、關華豆膠、氯化鉀、維生素&礦物質、綠唇貽貝、牛磺酸、氯化膽鹼、絲蘭、輔酶Q10</p>
+                                <h3>營養標示</h3>
+                                <table>
+                                    <tr class="nutrient_title">
+                                        <td>粗蛋白</td>
+                                        <td>粗脂肪</td>
+                                        <td>粗纖維</td>
+                                        <td>灰質</td>
+                                    </tr>
+                                    <tr class="nutrient_txt">
+                                        <td>9.57%</td>
+                                        <td>8.48%</td>
+                                        <td>0.31%</td>
+                                        <td>2.66%</td>
+                                    </tr>
+                                    <tr class="nutrient_title">
+                                        <td>水分</td>
+                                        <td>鈣</td>
+                                        <td>磷</td>
+                                        <td>總熱量</td>
+                                    </tr>
+                                    <tr class="nutrient_txt">
+                                        <td>77.87%</td>
+                                        <td>0.41%</td>
+                                        <td>0.29%</td>
+                                        <td>120.6 大卡 / 100 克</td>
+                                    </tr>
+                                </table>
+                            </li>
+
+                            <li class="product4">
+                                <div class="product_img">
+                                    <img
+                                        src="./source/img/nutrition_query/crius_04.jpeg"
+                                        alt="">
+                                </div>
+                                <h4>天然無穀牧野羊</h4>
+                                <h5 class="check-circle">
+                                    <i class="bi bi-check-circle-fill"></i>符合 AAFCO/NRC 標準</h5>
+                                <h5 class="x-circle">
+                                    <i class="bi bi-x-circle-fill"></i>蛋白質超過 30%</h5>
+                                <h5 class="x-circle">
+                                    <i class="bi bi-x-circle-fill"></i>無膠類</h5>
+                                <h3>主要成份</h3>
+                                <p class="nutrient_content">鮮肉湯、羊肉、羊肝、羊肺、羊腎、南瓜、啤酒酵母、羊血、魚油、碳酸鈣、焦磷酸四鈉、瓊脂、肉桂、關華豆膠、氯化鉀、維生素&礦物質、綠唇貽貝、牛磺酸、氯化膽鹼、絲蘭、輔酶Q10</p>
+                                <h3>營養標示</h3>
+                                <table>
+                                    <tr class="nutrient_title">
+                                        <td>粗蛋白</td>
+                                        <td>粗脂肪</td>
+                                        <td>粗纖維</td>
+                                        <td>灰質</td>
+                                    </tr>
+                                    <tr class="nutrient_txt">
+                                        <td>9.83%</td>
+                                        <td>7.82%</td>
+                                        <td>0.46%</td>
+                                        <td>3.15%</td>
+                                    </tr>
+                                    <tr class="nutrient_title">
+                                        <td>水分</td>
+                                        <td>鈣</td>
+                                        <td>磷</td>
+                                        <td>總熱量</td>
+                                    </tr>
+                                    <tr class="nutrient_txt">
+                                        <td>74.96%</td>
+                                        <td>0.42%</td>
+                                        <td>0.36%</td>
+                                        <td>124 大卡 / 100 克</td>
+                                    </tr>
+                                </table>
+                            </li>
+
+                            <li class="product5">
+                                <div class="product_img">
+                                    <img
+                                        src="./source/img/nutrition_query/crius_05.jpeg"
+                                        alt="">
+                                </div>
+                                <h4>天然無穀風味牛</h4>
+                                <h5 class="check-circle">
+                                    <i class="bi bi-check-circle-fill"></i>符合 AAFCO/NRC 標準</h5>
+                                <h5 class="x-circle">
+                                    <i class="bi bi-x-circle-fill"></i>蛋白質超過 30%</h5>
+                                <h5 class="x-circle">
+                                    <i class="bi bi-x-circle-fill"></i>無膠類</h5>
+                                <h3>主要成份</h3>
+                                <p class="nutrient_content">鮮肉湯、牛肉、牛肝、牛肺、牛腎、南瓜、啤酒酵母、羊血、魚油、碳酸鈣、焦磷酸四鈉、瓊脂、肉桂、關華豆膠、氯化鉀、維生素&礦物質、綠唇貽貝、牛磺酸、氯化膽鹼、絲蘭、輔酶Q10</p>
+                                <h3>營養標示</h3>
+                                <table>
+                                    <tr class="nutrient_title">
+                                        <td>粗蛋白</td>
+                                        <td>粗脂肪</td>
+                                        <td>粗纖維</td>
+                                        <td>灰質</td>
+                                    </tr>
+                                    <tr class="nutrient_txt">
+                                        <td>10.45%</td>
+                                        <td>6.02%</td>
+                                        <td>0.58%</td>
+                                        <td>3.16%</td>
+                                    </tr>
+                                    <tr class="nutrient_title">
+                                        <td>水分</td>
+                                        <td>鈣</td>
+                                        <td>磷</td>
+                                        <td>總熱量</td>
+                                    </tr>
+                                    <tr class="nutrient_txt">
+                                        <td>75.18%</td>
+                                        <td>0.48%</td>
+                                        <td>0.34%</td>
+                                        <td>113.8 大卡 / 100 克</td>
+                                    </tr>
+                                </table>
+                            </li>
+
+                            <li class="product6">
+                                <div class="product_img">
+                                    <img
+                                        src="./source/img/nutrition_query/crius_06.jpeg"
+                                        alt="">
+                                </div>
+                                <h4>天然無穀鮮鮪魚</h4>
+                                <h5 class="check-circle">
+                                    <i class="bi bi-check-circle-fill"></i>符合 AAFCO/NRC 標準</h5>
+                                <h5 class="x-circle">
+                                    <i class="bi bi-x-circle-fill"></i>蛋白質超過 30%</h5>
+                                <h5 class="x-circle">
+                                    <i class="bi bi-x-circle-fill"></i>無膠類</h5>
+                                <h3>主要成份</h3>
+                                <p class="nutrient_content">鮪魚、鮮肉湯、南瓜、啤酒酵母、羊血、魚油、碳酸鈣、焦磷酸四鈉、瓊脂、肉桂、關華豆膠、氯化鉀、維生素&礦物質、綠唇貽貝、牛磺酸、氯化膽鹼、絲蘭、輔酶Q10</p>
+                                <h3>營養標示</h3>
+                                <table>
+                                    <tr class="nutrient_title">
+                                        <td>粗蛋白</td>
+                                        <td>粗脂肪</td>
+                                        <td>粗纖維</td>
+                                        <td>灰質</td>
+                                    </tr>
+                                    <tr class="nutrient_txt">
+                                        <td>13.14%</td>
+                                        <td>3.13%</td>
+                                        <td>0.48%</td>
+                                        <td>2.61%</td>
+                                    </tr>
+                                    <tr class="nutrient_title">
+                                        <td>水分</td>
+                                        <td>鈣</td>
+                                        <td>磷</td>
+                                        <td>總熱量</td>
+                                    </tr>
+                                    <tr class="nutrient_txt">
+                                        <td>80.62%</td>
+                                        <td>0.33%</td>
+                                        <td>0.25%</td>
+                                        <td>86.1 大卡 / 100 克</td>
+                                    </tr>
+                                </table>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="tab-content tab-content-2">
+                        <!-- 嘿囉 Halo 圖片商品來源：https://www.halopets.com.tw/pages/%E4%B8%BB%E9%A3%9F%E7%BD%90 -->
+                        <ul>
+                            <li class="product1">
+                                <div class="product_img">
+                                    <img
+                                        src="./source/img/nutrition_query/halo_01.jpg"
+                                        alt=""
+                                        style="">
+                                </div>
+                                <h4>無穀鮮燉雞肉</h4>
+                                <h5 class="check-circle">
+                                    <i class="bi bi-check-circle-fill"></i>符合 AAFCO/NRC 標準</h5>
+                                <h5 class="x-circle">
+                                    <i class="bi bi-x-circle-fill"></i>蛋白質超過 30%</h5>
+                                <h5 class="x-circle">
+                                    <i class="bi bi-x-circle-fill"></i>無膠類</h5>
+                                <h3>主要成份</h3>
+                                <p class="nutrient_content">雞肉，雞肝，雞湯，雞蛋，蔬菜高湯，鮭魚油，天然香料，蛋製品，亞麻籽粉，洋菜，氯化鉀，天然鹽，氯化膽鹼，蔓越莓，食用蒲公英，牛磺酸，鎂硫酸鹽，乾海帶，絲蘭萃取物，西洋芹，礦物質，維生素</p>
+                                <h3>營養標示</h3>
+                                <table>
+                                    <tr class="nutrient_title">
+                                        <td>粗蛋白</td>
+                                        <td>粗脂肪</td>
+                                        <td>粗纖維</td>
+                                        <td>灰質</td>
+                                    </tr>
+                                    <tr class="nutrient_txt">
+                                        <td>11.9%</td>
+                                        <td>10.0%</td>
+                                        <td>1.25%</td>
+                                        <td>3.2%</td>
+                                    </tr>
+                                    <tr class="nutrient_title">
+                                        <td>水分</td>
+                                        <td>鈣</td>
+                                        <td>磷</td>
+                                        <td>總熱量</td>
+                                    </tr>
+                                    <tr class="nutrient_txt">
+                                        <td>73.5%</td>
+                                        <td>0.4%</td>
+                                        <td>0.3%</td>
+                                        <td>106 大卡 / 1 罐</td>
+                                    </tr>
+                                </table>
+                            </li>
+
+                            <li class="product2">
+                                <div class="product_img">
+                                    <img
+                                        src="./source/img/nutrition_query/halo_02.jpg"
+                                        alt=""
+                                        style="">
+                                </div>
+                                <h4>無穀野生白魚</h4>
+                                <h5 class="check-circle">
+                                    <i class="bi bi-check-circle-fill"></i>符合 AAFCO/NRC 標準</h5>
+                                <h5 class="x-circle">
+                                    <i class="bi bi-x-circle-fill"></i>蛋白質超過 30%</h5>
+                                <h5 class="x-circle">
+                                    <i class="bi bi-x-circle-fill"></i>無膠類</h5>
+                                <h3>主要成份</h3>
+                                <p class="nutrient_content">野生白魚，火雞肉，火雞高湯，蔬菜高湯，火雞肝，鮭魚，鮭魚油(與綜合維生素E混合保存)，天然香料，亞麻籽，洋菜，氯化鉀，牛磺酸，蔓越莓，天然鹽，氯化膽鹼，食用蒲公英， 硫酸鎂，絲蘭萃取物，西洋芹，礦物質，維生素，葉酸</p>
+                                <h3>營養標示</h3>
+                                <table>
+                                    <tr class="nutrient_title">
+                                        <td>粗蛋白</td>
+                                        <td>粗脂肪</td>
+                                        <td>粗纖維</td>
+                                        <td>灰質</td>
+                                    </tr>
+                                    <tr class="nutrient_txt">
+                                        <td>11.7%</td>
+                                        <td>6.2%</td>
+                                        <td>1.25%</td>
+                                        <td>3.2%</td>
+                                    </tr>
+                                    <tr class="nutrient_title">
+                                        <td>水分</td>
+                                        <td>鈣</td>
+                                        <td>磷</td>
+                                        <td>總熱量</td>
+                                    </tr>
+                                    <tr class="nutrient_txt">
+                                        <td>77.7%</td>
+                                        <td>0.6%</td>
+                                        <td>0.5%</td>
+                                        <td>95 大卡 / 100 克</td>
+                                    </tr>
+                                </table>
+                            </li>
+
+                            <li class="product3">
+                                <div class="product_img">
+                                    <img
+                                        src="./source/img/nutrition_query/halo_03.jpg"
+                                        alt=""
+                                        style="">
+                                </div>
+                                <h4>無穀野生鮭魚</h4>
+                                <h5 class="check-circle">
+                                    <i class="bi bi-check-circle-fill"></i>符合 AAFCO/NRC 標準</h5>
+                                <h5 class="x-circle">
+                                    <i class="bi bi-x-circle-fill"></i>蛋白質超過 30%</h5>
+                                <h5 class="x-circle">
+                                    <i class="bi bi-x-circle-fill"></i>無膠類</h5>
+                                <h3>主要成份</h3>
+                                <p class="nutrient_content">鮭魚，水，火雞，火雞肝，鮭魚油(以綜合維生素E保存)，天然香料，甘藷，瓜爾豆膠，鹿角菜膠，蔓越莓，菠菜，磷酸三鈣，氯化鉀，胡蘿蔔，礦物質，氯化膽鹼，維生素，牛磺酸，硫酸鎂</p>
+                                <h3>營養標示</h3>
+                                <table>
+                                    <tr class="nutrient_title">
+                                        <td>粗蛋白</td>
+                                        <td>粗脂肪</td>
+                                        <td>粗纖維</td>
+                                        <td>灰質</td>
+                                    </tr>
+                                    <tr class="nutrient_txt">
+                                        <td>11.2%</td>
+                                        <td>8.9%</td>
+                                        <td>0.75%</td>
+                                        <td>4.0%</td>
+                                    </tr>
+                                    <tr class="nutrient_title">
+                                        <td>水分</td>
+                                        <td>鈣</td>
+                                        <td>磷</td>
+                                        <td>總熱量</td>
+                                    </tr>
+                                    <tr class="nutrient_txt">
+                                        <td>75.9%</td>
+                                        <td>0.4%</td>
+                                        <td>0.4%</td>
+                                        <td>174 大卡 / 100 克</td>
+                                    </tr>
+                                </table>
+                            </li>
+
+                            <li class="product4">
+                                <div class="product_img">
+                                    <img
+                                        src="./source/img/nutrition_query/halo_04.jpg"
+                                        alt=""
+                                        style="">
+                                </div>
+                                <h4> 無穀健康綜合海鮮</h4>
+                                <h5 class="check-circle">
+                                    <i class="bi bi-check-circle-fill"></i>符合 AAFCO/NRC 標準</h5>
+                                <h5 class="x-circle">
+                                    <i class="bi bi-x-circle-fill"></i>蛋白質超過 30%</h5>
+                                <h5 class="x-circle">
+                                    <i class="bi bi-x-circle-fill"></i>無膠類</h5>
+                                <h3>主要成份</h3>
+                                <p class="nutrient_content">白魚，雞肝，鮭魚，鮭魚高湯，鱒魚，胡蘿蔔，菠菜，蝦肉，天然香料，甘藷，瓜爾豆膠，脫水苜蓿粉，鹿角菜膠，氯化鉀，蔓越莓，鹽，礦物質，維生素，氯化膽鹼，牛磺酸，碳酸鈣
+</p>
+                                <h3>營養標示</h3>
+                                <table>
+                                    <tr class="nutrient_title">
+                                        <td>粗蛋白</td>
+                                        <td>粗脂肪</td>
+                                        <td>粗纖維</td>
+                                        <td>灰質</td>
+                                    </tr>
+                                    <tr class="nutrient_txt">
+                                        <td>15.0%</td>
+                                        <td>4.3%</td>
+                                        <td>1.0%</td>
+                                        <td>N/A</td>
+                                    </tr>
+                                    <tr class="nutrient_title">
+                                        <td>水分</td>
+                                        <td>鈣</td>
+                                        <td>磷</td>
+                                        <td>總熱量</td>
+                                    </tr>
+                                    <tr class="nutrient_txt">
+                                        <td>75.8%</td>
+                                        <td>0.5%</td>
+                                        <td>0.4%</td>
+                                        <td>147 大卡 / 100 克</td>
+                                    </tr>
+                                </table>
+                            </li>
+
+                            <li class="product5">
+                                <div class="product_img">
+                                    <img
+                                        src="./source/img/nutrition_query/halo_05.jpg"
+                                        alt=""
+                                        style="">
+                                </div>
+                                <h4>無穀鮮燉雞肉</h4>
+                                <h5 class="check-circle">
+                                    <i class="bi bi-check-circle-fill"></i>符合 AAFCO/NRC 標準</h5>
+                                <h5 class="x-circle">
+                                    <i class="bi bi-x-circle-fill"></i>蛋白質超過 30%</h5>
+                                <h5 class="x-circle">
+                                    <i class="bi bi-x-circle-fill"></i>無膠類</h5>
+                                <h3>主要成份</h3>
+                                <p class="nutrient_content">雞肉、雞湯、雞肝、胡蘿蔔、火雞、青豆、豌豆、芹菜、甜薯、瓜爾豆膠、玉米糖膠、氯化鉀、南瓜、亞麻籽油(與生育酚混合保存）、礦物質、氯化膽鹼、維生素、牛磺酸、乾海帶、鮭魚油(與生育酚混合保存）、硫酸鎂、天然香料</p>
+                                <h3>營養標示</h3>
+                                <table>
+                                    <tr class="nutrient_title">
+                                        <td>粗蛋白</td>
+                                        <td>粗脂肪</td>
+                                        <td>粗纖維</td>
+                                        <td>灰質</td>
+                                    </tr>
+                                    <tr class="nutrient_txt">
+                                        <td>10.3%</td>
+                                        <td>7.0%</td>
+                                        <td>0.4%</td>
+                                        <td>2.0%</td>
+                                    </tr>
+                                    <tr class="nutrient_title">
+                                        <td>水分</td>
+                                        <td>鈣</td>
+                                        <td>磷</td>
+                                        <td>總熱量</td>
+                                    </tr>
+                                    <tr class="nutrient_txt">
+                                        <td>78.8%</td>
+                                        <td>0.4%</td>
+                                        <td>0.4%</td>
+                                        <td>87 大卡 / 100 克</td>
+                                    </tr>
+                                </table>
+                            </li>
+
+                            
+
+                        </ul>
+                    </div>
+                    <div class="tab-content tab-content-3">
+                        <!-- CANIDAE 卡比商品內容：https://www.fuzeshop.com.tw/categories/canidae%E5%8D%A1%E6%AF%94-%E7%84%A1%E7%A9%80%E4%B8%BB%E9%A3%9F%E7%BD%90 -->
+                        <ul>
+                            <li class="product1">
+                                <div class="product_img">
+                                    <img
+                                        src="./source/img/nutrition_query/canidae_01.jpg"
+                                        alt="">
+                                </div>
+                                <h4>嚴選鮪魚湯罐</h4>
+                                <h5 class="check-circle">
+                                    <i class="bi bi-check-circle-fill"></i>符合 AAFCO/NRC 標準</h5>
+                                <h5 class="x-circle">
+                                    <i class="bi bi-x-circle-fill"></i>蛋白質超過 30%</h5>
+                                <h5 class="x-circle">
+                                    <i class="bi bi-x-circle-fill"></i>無膠類</h5>
+                                <h3>主要成份</h3>
+                                <p class="nutrient_content">	水、鮪魚、葵花籽油、磷酸三鈣、魚萃取物、瓜爾豆膠、焦磷酸鈉、礦物質（氧化鋅、還原鐵、亞硒酸鈉、水合硫酸錳、甘氨酸銅、碘化鉀）、氯化膽鹼、維生素（維生素E、硫胺素、菸酸、維生素A、鹽酸吡哆醇、D-泛酸鈣、核黃素、葉酸、維生素B12、維生素D3、生物素）、三仙膠、牛磺酸</p>
+                                <h3>營養標示</h3>
+                                <table>
+                                    <tr class="nutrient_title">
+                                        <td>粗蛋白</td>
+                                        <td>粗脂肪</td>
+                                        <td>粗纖維</td>
+                                        <td>灰質</td>
+                                    </tr>
+                                    <tr class="nutrient_txt">
+                                        <td>12%</td>
+                                        <td>1.5%</td>
+                                        <td>1%</td>
+                                        <td>3%</td>
+                                    </tr>
+                                    <tr class="nutrient_title">
+                                        <td>水分</td>
+                                        <td>鈣</td>
+                                        <td>磷</td>
+                                        <td>總熱量</td>
+                                    </tr>
+                                    <tr class="nutrient_txt">
+                                        <td>84%</td>
+                                        <td>0.14%</td>
+                                        <td>0.15%</td>
+                                        <td>76 大卡 / 100 克</td>
+                                    </tr>
+                                </table>
+                            </li>
+
+                            <li class="product2">
+                                <div class="product_img">
+                                    <img
+                                        src="./source/img/nutrition_query/canidae_02.jpg"
+                                        alt="">
+                                </div>
+                                <h4>嚴選鮮雞湯罐</h4>
+                                <h5 class="check-circle">
+                                    <i class="bi bi-check-circle-fill"></i>符合 AAFCO/NRC 標準</h5>
+                                <h5 class="x-circle">
+                                    <i class="bi bi-x-circle-fill"></i>蛋白質超過 30%</h5>
+                                <h5 class="x-circle">
+                                    <i class="bi bi-x-circle-fill"></i>無膠類</h5>
+                                <h3>主要成份</h3>
+                                <p class="nutrient_content">水、雞肉、葵花籽油、木薯澱粉、磷酸三鈣、瓜爾豆膠、焦磷酸鈉、氯化鉀、礦物質（氧化鋅、還原鐵、亞硒酸鈉、水合硫酸錳、甘氨酸銅、碘化鉀）、鹽、維生素（維生素E、硫胺素、菸酸、維生素A、鹽酸吡哆醇、D-泛酸鈣、核黃素、葉酸、維生素B12、維生素D3、生物素）、牛磺酸、氯化膽鹼、 硫酸鎂、紅椒粉</p>
+                                <h3>營養標示</h3>
+                                <table>
+                                    <tr class="nutrient_title">
+                                        <td>粗蛋白</td>
+                                        <td>粗脂肪</td>
+                                        <td>粗纖維</td>
+                                        <td>灰質</td>
+                                    </tr>
+                                    <tr class="nutrient_txt">
+                                        <td>11%</td>
+                                        <td>1%</td>
+                                        <td>1%</td>
+                                        <td>3%</td>
+                                    </tr>
+                                    <tr class="nutrient_title">
+                                        <td>水分</td>
+                                        <td>鈣</td>
+                                        <td>磷</td>
+                                        <td>總熱量</td>
+                                    </tr>
+                                    <tr class="nutrient_txt">
+                                        <td>84%</td>
+                                        <td>0.15%</td>
+                                        <td>0.15%</td>
+                                        <td>70 大卡 / 100 克</td>
+                                    </tr>
+                                </table>
+                            </li>
+
+                            <li class="product3">
+                                <div class="product_img">
+                                    <img
+                                        src="./source/img/nutrition_query/canidae_03.jpg"
+                                        alt="">
+                                </div>
+                                <h4>鮪魚、雞肉、鯛魚湯罐</h4>
+                                <h5 class="check-circle">
+                                    <i class="bi bi-check-circle-fill"></i>符合 AAFCO/NRC 標準</h5>
+                                <h5 class="x-circle">
+                                    <i class="bi bi-x-circle-fill"></i>蛋白質超過 30%</h5>
+                                <h5 class="x-circle">
+                                    <i class="bi bi-x-circle-fill"></i>無膠類</h5>
+                                <h3>主要成份</h3>
+                                <p class="nutrient_content">水、鮪魚、雞肉、鯛魚、葵花籽油、木薯澱粉、磷酸三鈣、瓜爾豆膠、焦磷酸鈉、礦物質（氧化鋅、還原鐵、亞硒酸鈉、水合硫酸錳、甘氨酸銅、碘化鉀）、氯化鉀、維生素（維生素E、硫胺素、菸酸、維生素A、鹽酸吡哆醇、D-泛酸鈣、核黃素、葉酸、維生素B12、維生素D3、生物素）、牛磺酸、氯化膽鹼、硫酸鎂</p>
+                                <h3>營養標示</h3>
+                                <table>
+                                    <tr class="nutrient_title">
+                                        <td>粗蛋白</td>
+                                        <td>粗脂肪</td>
+                                        <td>粗纖維</td>
+                                        <td>灰質</td>
+                                    </tr>
+                                    <tr class="nutrient_txt">
+                                        <td>10%</td>
+                                        <td>1.5%</td>
+                                        <td>1%</td>
+                                        <td>3%</td>
+                                    </tr>
+                                    <tr class="nutrient_title">
+                                        <td>水分</td>
+                                        <td>鈣</td>
+                                        <td>磷</td>
+                                        <td>總熱量</td>
+                                    </tr>
+                                    <tr class="nutrient_txt">
+                                        <td>84%</td>
+                                        <td>0.16%</td>
+                                        <td>0.15%</td>
+                                        <td>70 大卡 / 100 克</td>
+                                    </tr>
+                                </table>
+                            </li>
+
+                            <li class="product4">
+                                <div class="product_img">
+                                    <img
+                                        src="./source/img/nutrition_query/canidae_04.jpg"
+                                        alt="">
+                                </div>
+                                <h4>沙丁魚、鯖魚湯罐</h4>
+                                <h5 class="check-circle">
+                                    <i class="bi bi-check-circle-fill"></i>符合 AAFCO/NRC 標準</h5>
+                                <h5 class="x-circle">
+                                    <i class="bi bi-x-circle-fill"></i>蛋白質超過 30%</h5>
+                                <h5 class="x-circle">
+                                    <i class="bi bi-x-circle-fill"></i>無膠類</h5>
+                                <h3>主要成份</h3>
+                                <p class="nutrient_content">水、沙丁魚、鯖魚、魷魚、葵花籽油、刺槐膠、礦物質（氧化鋅、還原鐵、亞硒酸鈉、水合硫酸錳、甘氨酸銅、碘化鉀）、瓜爾豆膠、牛磺酸、氯化膽鹼、維生素（維生素E、硫胺素、菸酸、維生素A、鹽酸吡哆醇、D-泛酸鈣、核黃素、葉酸、維生素B12、維生素D3、生物素）、氯化鉀、三仙膠、紅椒粉</p>
+                                <h3>營養標示</h3>
+                                <table>
+                                    <tr class="nutrient_title">
+                                        <td>粗蛋白</td>
+                                        <td>粗脂肪</td>
+                                        <td>粗纖維</td>
+                                        <td>灰質</td>
+                                    </tr>
+                                    <tr class="nutrient_txt">
+                                        <td>7%</td>
+                                        <td>2%</td>
+                                        <td>1%</td>
+                                        <td>3.5%</td>
+                                    </tr>
+                                    <tr class="nutrient_title">
+                                        <td>水分</td>
+                                        <td>鈣</td>
+                                        <td>磷</td>
+                                        <td>總熱量</td>
+                                    </tr>
+                                    <tr class="nutrient_txt">
+                                        <td>86%</td>
+                                        <td>0.18%</td>
+                                        <td>0.15%</td>
+                                        <td>70 大卡 / 100 克</td>
+                                    </tr>
+                                </table>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+          
+            <!-- footer -->
+            <footer>
+                <div class="footer_wrapper">
+                    <div>
+                        <h4>Amelie Kuo
+                            <a
+                                href="mailto:amelie.chihyu.kuo@gmail.com?subject=來源：Mealmap_Project">amelie.chihyu.kuo@gmail.com</a>
+                        </h4>
+                    </div>
+                    <div>
+                        <p>緯育 TibaMe 前端工程師班第 82 期學員專題作品，本平台僅供學習、展示之用
+                            <br>參考資源：
+
+                            <a href="https://trello.com/" target="_blank">Trello</a>、<a
+                                href="https://www.arigatobank.com/index.html" target="_blank">arigatobank</a>、<a
+                                href="https://service.kateinoigaku.jp/index.html" target="_blank">みんなの家庭の医学</a>
+                        </p>
+                    </div>
+                </div>
+            </footer>
+
+            <!-- fab_gototop -->
+            <div class="gototop">
+                <a id="myBtn" onclick="topFunction()">
+                    <i class="bi bi-chevron-up"></i>
+                </a>
+            </div>
+
+    <!-- javascript -->
+    <script src="./js/jquery-3.6.3.min.js"></script>
+    <script src="./js/owl.carousel/owl.carousel.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- 主要 js -->
+    <script src="./js/main.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+        </body>
+    </html>

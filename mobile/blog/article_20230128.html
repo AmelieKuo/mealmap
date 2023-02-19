@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>你的貓跟你越來越像？科學研究：貓咪行為可以看出主人性格｜Meal Map Blog</title>
+        <meta name="description" content="寵物行為專家 Lauren Finka 在調查訪問了超過 3,300 名貓咪飼養者後，在美國公共科學圖書館出版的學術期刊《PLOS One》上發表了研究成果。結果表明，貓主人的性格、養育方式與貓咪的行為甚至健康之間有緊密關聯。她以心理學著名的「人格五因素模型（five-factor model）」為基準，整理出貓咪行為與飼養者的性格、教養方式三者之間的關聯"/>
+
+        <link rel="stylesheet" href="../css/article.css">
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+        <link rel="icon" href="../source/img/favicon.ico" type="image/x-icon">
+
+        <!-- owl.carousel -->
+        <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+        <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+
+        <!-- AOS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    </head>
+
+    <body>
+ <!-- navbar -->
+ <nav class="header" id="header">
+    <div class="nav_center">
+        <div class="left_nav">
+            <i class="bi bi-list" onclick="myFunction()";></i>
+            <a href="./index.html" class="navlogo">
+                <img class="logo_pc" src="../source/img/logo.svg" alt="MealMap_Logo">
+                <img class="logo_mb" src="../source/img/logo_m.svg" alt="MealMap_Logo"></a>
+            <ul id="mbNav" class="mbNav_ul">
+                <li class="Main_LeftListLiSelector">
+                    <a href="#">營養查詢
+                        <i class="bi bi-chevron-down"></i>
+                    </a>
+
+                    <!-- 子選單 -->
+                    <ol class="menu_dropdown item1">
+                        <li>
+                            <a href="./nutrition_query.html">依品牌搜尋</a>
+                        </li>
+                        <li>
+                            <a href="./app_ai.html">掃描辨識</a>
+                        </li>
+                    </ol>
+                </li>
+                <li class="Main_LeftListLiSelector">
+                    <a href="#">飲食計畫
+                        <i class="bi bi-chevron-down"></i>
+                    </a>
+
+                    <!-- 子選單 -->
+                    <ol class="menu_dropdown item2">
+                        <li>
+                            <a href="./calorie.html">熱量 / 飲水量計算</a>
+                        </li>
+                        <li>
+                            <a href="./app_record.html">飲食紀錄</a>
+                        </li>
+                    </ol>
+
+                </li>
+                <li>
+                    <a href="./plans.html">方案</a>
+                </li>
+                <li>
+                    <a href="./blog.html">部落格</a>
+                </li>
+                <li class="mb_right_nav">
+                    <a href="#" onclick="document.getElementById('signup_overlay').style.display='block'" style="width:auto;">註冊
+                        / 登入</a>
+                </li>
+            </ul>
+        </div>
+        <div class="right_nav">
+            <!-- <button class="header_navigation_sign-up">註冊 / 登入</button> -->
+            <button onclick="document.getElementById('signup_overlay').style.display='block'" style="width:auto;">註冊
+                / 登入</button>
+        </div>
+    </div>
+</nav>
+
+<!-- 註冊視窗 -->
+<div id="signup_overlay" class="modal">
+    <form class="modal-content" action="/action_page.php">
+        <div class="container">
+            <span onclick="document.getElementById('signup_overlay').style.display='none'" class="close"
+                title="Close Modal">&times;</span>
+
+            <div class="container_left">
+                <img src="./source/img/sign-uporlogin/Logo_Horizontal.png" alt="">
+                <h2>
+                    <span>年繳方案</span><br>
+                    83% 限時折扣優惠
+                </h2>
+            </div>
+            <div class="container_right">
+                
+                <h1>Meal Map 新朋友？<br>首次使用記得完成註冊</h1>
+
+                <div class="other_signup">
+                    <a href="#">
+                        <img src="./source/img/sign-uporlogin/Google_logo.png" alt="">
+                    </a>
+
+                    <a href="#">
+                        <img src="./source/img/sign-uporlogin/Faceook_logo.png" alt="">
+                    </a>
+
+                    <a href="#">
+                        <img src="./source/img/sign-uporlogin/Apple_logo.png" alt="">
+                    </a>
+                </div>
+                <p class="hr_or">-OR-</p>
+                <div class="input_content">
+                    <label for="email">
+                        <b>Email</b>
+                    </label>
+                    <input type="text" placeholder="請輸入 email" name="email" required="required">
+
+                    <label for="psw">
+                        <b>密碼</b>
+                    </label>
+                    <input type="password" placeholder="請輸入超過 8 位英數混合密碼" name="psw" required="required">
+
+                    <p class="consent">按下「註冊」，即表示同意
+                        <a href="#" style="color:dodgerblue">Meal Map 服務條款
+                        </a>並認可隱私政策。
+                    </p>
+
+                    <div class="clearfix">
+                        <button type="submit" class="signupbtn">立即註冊</button>
+                    </div>
+
+                    <div>
+                        <p class="p_tologin">已經有帳號了？<span class="tologin">點我登入</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+        <!-- 文章內容 -->
+        <div class="article_wrapper">
+            <div class="article">
+                <div class="left_article">
+                    <div>
+                        <a href="#" class="article_tag">冷知識</a>
+                    </div>
+                    <p>日期｜2023.01.28</p>
+                    <p>閱覽數｜24,540 次</p>
+
+                    <i class="bi bi-share"></i>
+                    <i class="bi bi-heart"></i>
+                </div>
+                <div class="right_article">
+                    <div class="article_top">
+                        <h2>你的貓跟你越來越像？科學研究：貓咪行為可以看出主人性格</h2>
+                        <img src="../source/img/article/20230128_banner.png" alt="">
+                        <div class="summary">寵物行為專家 Lauren Finka 在調查訪問了超過 3,300
+                            名貓咪飼養者後，在美國公共科學圖書館出版的學術期刊《PLOS
+                            One》上發表了研究成果。結果表明，貓主人的性格、養育方式與貓咪的行為甚至健康之間有緊密關聯...
+                        </div>
+                        <div class="article_content">
+                            <p class="article_src">文章轉載：<a
+                                href="https://buzzorange.com/vidaorange/2019/05/06/cat-owners-personality-pet-parenting-style/">生活報橘</a>
+                            </p>
+                            <p>你是個貓奴嗎？無論乖巧聽話還是冷漠神秘，你是否曾經想過，你家貓主子的個性，可能跟你自己本身的性格有關呢？</p>
+                            <p>寵物行為專家 Lauren Finka 在調查訪問了超過 3,300 名貓咪飼養者後，在美國公共科學圖書館出版的學術期刊《PLOS
+                                One》上發表了研究成果。結果表明，<span style="color: #800000">
+                                    <strong>貓主人的性格、養育方式與貓咪的行為甚至健康之間有緊密關聯</strong>
+                                </span>。她以心理學著名的「人格五因素模型（five-factor model）」為基準，整理出貓咪行為與飼養者的性格、教養方式三者之間的關聯；</p>
+                            <br><br>
+                                <p>
+                                <strong>＃盡責性 Conscientiousness</strong>
+                            </p>
+                            <p>人們對貓咪的印象通常是冷漠、我行我素，但研究指出當飼主在盡責性得分較高時，他們擁有的貓咪通常具有較低的攻擊性、恐懼感或孤獨感，<span style="color: #800000">
+                                    <strong>社交意願也更高，可能表現得更加熱情</strong>
+                                </span>。</p><br><br>
+                            <p>
+                                <strong>＃外向性 Extraversion</strong>
+                            </p>
+                            <p>一位外向活潑的飼主更可能讓他們的貓在戶外活動，然而我們知道許多貓咪天性對習慣的環境依賴度很高，牠們必須跟熟悉的住所、玩具與貓砂盆待在一起才有安全感。在忽視貓咪本身性格的情況下，<span style="color: #800000">
+                                    <strong>飼主與貓咪之間感情可能較疏離</strong>
+                                </span>。</p><br><br>
+
+                                <img src="../source/img/article/20230128_article_content.jpg" alt="">
+                            <p>
+                                <strong>＃親和性 Agreeableness &amp; 經驗開放性 Openness to experience</strong>
+                            </p>
+                            <p>和藹可親、經驗開放性高的人們通常對自己的貓咪滿意度較高。他們飼養的貓咪會顯得<span style="color: #800000">
+                                    <strong>更有紀律</strong>
+                                </span>、更可能遵守主人訂下的規矩；<span style="color: #800000">
+                                    <strong>在接觸新環境、新用品甚至學習新遊戲時，積極性也更高</strong>
+                                </span>。</p><br><br>
+                            <p>
+                                <strong>＃情緒不穩定性 Neuroticism</strong>
+                            </p>
+                            <p>情緒起伏大的飼主，通常社交應對技巧和身心健康也較差。他們養育風格可能會嚴厲獨裁。研究結果表明，當貓主人在情緒不穩定上得分較高時，<span style="color: #800000">
+                                    <strong>貓咪的整體健康狀況更糟，行為偏差也更嚴重</strong>
+                                </span>，包含超重等醫學病症，或是高度焦慮、敵意與攻擊性等。</p>
+                            <p>當然這些研究結果還有更深的意涵。「對我而言，這些結果最重要的意義是<span style="color: #800000">
+                                    <strong>提高人們作為動物護理者的責任意識，因為飼養者的一舉一動都可能影響寵物的健康</strong>
+                                </span>。」Lauren Finka 說。</p>
+                        </div>
+                        <div class="article_bottom_tag">
+                            <a href="#" class="">冷知識</a>
+                            <p>日期｜2023.01.27</p>
+                            <p>閱覽數｜1,321,040 次</p>
+                        </div>
+                    </div>
+                    <div class="article_alsolike">
+                        <h2>猜你喜歡</h2>
+                        <ul>
+                            <li>
+                                <div class="article_alsolike_content" href="./article_20230129.html">
+                                    <h3>
+                                        <a href="./article_20230129.html">貓狗大戰一觸即發，同居準則大公開！｜專業獸醫—李道絨</a>
+                                    </h3>
+                                    <div class="article_alsolike_content_tags">
+                                        <a href="#">獸醫說</a>
+                                        <a href="#">Jan 28,2023</a>
+                                        <a href="#">
+                                            <i class="bi bi-eye-fill"></i>2141K</a>
+                                    </div>
+                                </div>
+                                <img src="../source/img/article/20230129_article.png" alt="">
+                            </li>
+                            <li>
+                                <div class="article_alsolike_content" href="./article_20230130.html">
+                                    <h3>
+                                        <a href="./article_20230130.html">你屬「喵星人」嗎？ 越南特有十二生肖「貓」取代「兔」</a>
+                                    </h3>
+                                    <div class="article_alsolike_content_tags">
+                                        <a href="#">冷知識</a>
+                                        <a href="#">Jan 30,2023</a>
+                                        <a href="#">
+                                            <i class="bi bi-eye-fill"></i>84K</a>
+                                    </div>
+                                </div>
+                                <img src="../source/img/article/20230130_article.png" alt="">
+                            </li>
+                            <li>
+                                <div class="article_alsolike_content" href="./article_20230131.html">
+                                    <h3>
+                                        <a href="./article_20230131.html">2023迎「貓年」！貓奴必訪的4個日本「療癒系貓城小鎮」</a>
+                                    </h3>
+                                    <div class="article_alsolike_content_tags">
+                                        <a href="#">去旅遊</a>
+                                        <a href="#">Jan 31,2023</a>
+                                        <a href="#">
+                                            <i class="bi bi-eye-fill"></i>473K</a>
+                                    </div>
+                                </div>
+                                <img src="../source/img/article/20230131_article.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer>
+            <div class="footer_wrapper">
+                <div>
+                    <h4>Amelie Kuo
+                        <a
+                            href="mailto:amelie.chihyu.kuo@gmail.com?subject=來源：Mealmap_Project">amelie.chihyu.kuo@gmail.com</a>
+                    </h4>
+                </div>
+                <div>
+                    <p>緯育 TibaMe 前端工程師班第 82 期學員專題作品，本平台僅供學習、展示之用
+                        <br>參考資源：
+        
+                        <a href="https://trello.com/" target="_blank">Trello</a>、<a
+                            href="https://www.arigatobank.com/index.html" target="_blank">arigatobank</a>、<a
+                            href="https://service.kateinoigaku.jp/index.html" target="_blank">みんなの家庭の医学</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+    <!-- fab_gototop -->
+    <div class="gototop">
+        <a id="myBtn" onclick="topFunction()">
+            <i class="bi bi-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- javascript -->
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+</html>

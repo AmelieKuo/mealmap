@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meal Map Blog｜最新貓知識、貓新聞、貓世界觀都在這裡！</title>
+        <meta name="description" content="貓咪知識大集合，最新貓咪相關新聞、商品快訊用MealMap貓消息最快獲得"/>
+
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+        
+        <link rel="icon" href="./source/img/favicon.ico" type="image/x-icon">
+        
+        <!-- AOS -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        
+        <!-- slick/slick -->
+        <link rel="stylesheet" href="./css/slick/slick.css">
+        <link rel="stylesheet" type="text/css" href="./css/slick/slick-theme.css"/>
+        
+        <link rel="stylesheet" href="./css/blog.css">
+    </head>
+
+    <body>
+    <!-- navbar -->
+    <nav class="header" id="header">
+        <div class="nav_center">
+            <div class="left_nav">
+                <i class="bi bi-list" onclick="myFunction()";></i>
+                <a href="./index.html" class="navlogo">
+                    <img class="logo_pc" src="./source/img/logo.svg" alt="MealMap_Logo">
+                    <img class="logo_mb" src="./source/img/logo_m.svg" alt="MealMap_Logo"></a>
+                <ul id="mbNav" class="mbNav_ul">
+                    <li class="Main_LeftListLiSelector">
+                        <a href="#">營養查詢
+                            <i class="bi bi-chevron-down"></i>
+                        </a>
+
+                        <!-- 子選單 -->
+                        <ol class="menu_dropdown item1">
+                            <li>
+                                <a href="./nutrition_query.html">依品牌搜尋</a>
+                            </li>
+                            <li>
+                                <a href="./app_ai.html">掃描辨識</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li class="Main_LeftListLiSelector">
+                        <a href="#">飲食計畫
+                            <i class="bi bi-chevron-down"></i>
+                        </a>
+
+                        <!-- 子選單 -->
+                        <ol class="menu_dropdown item2">
+                            <li>
+                                <a href="./calorie.html">熱量 / 飲水量計算</a>
+                            </li>
+                            <li>
+                                <a href="./app_record.html">飲食紀錄</a>
+                            </li>
+                        </ol>
+
+                    </li>
+                    <li>
+                        <a href="./plans.html">方案</a>
+                    </li>
+                    <li>
+                        <a href="./blog.html">部落格</a>
+                    </li>
+                    <li class="mb_right_nav">
+                        <a href="#" onclick="document.getElementById('signup_overlay').style.display='block'" style="width:auto;">註冊
+                            / 登入</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right_nav">
+                <!-- <button class="header_navigation_sign-up">註冊 / 登入</button> -->
+                <button onclick="document.getElementById('signup_overlay').style.display='block'" style="width:auto;">註冊
+                    / 登入</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 註冊視窗 -->
+    <div id="signup_overlay" class="modal">
+        <form class="modal-content" action="/action_page.php">
+            <div class="container">
+                <span onclick="document.getElementById('signup_overlay').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+
+                <div class="container_left">
+                    <img src="./source/img/sign-uporlogin/Logo_Horizontal.png" alt="">
+                    <h2>
+                        <span>年繳方案</span><br>
+                        83% 限時折扣優惠
+                    </h2>
+                </div>
+                <div class="container_right">
+                    
+                    <h1>Meal Map 新朋友？<br>首次使用記得完成註冊</h1>
+
+                    <div class="other_signup">
+                        <a href="#">
+                            <img src="./source/img/sign-uporlogin/Google_logo.png" alt="">
+                        </a>
+
+                        <a href="#">
+                            <img src="./source/img/sign-uporlogin/Faceook_logo.png" alt="">
+                        </a>
+
+                        <a href="#">
+                            <img src="./source/img/sign-uporlogin/Apple_logo.png" alt="">
+                        </a>
+                    </div>
+                    <p class="hr_or">-OR-</p>
+                    <div class="input_content">
+                        <label for="email">
+                            <b>Email</b>
+                        </label>
+                        <input type="text" placeholder="請輸入 email" name="email" required="required">
+
+                        <label for="psw">
+                            <b>密碼</b>
+                        </label>
+                        <input type="password" placeholder="請輸入超過 8 位英數混合密碼" name="psw" required="required">
+
+                        <p class="consent">按下「註冊」，即表示同意
+                            <a href="#" style="color:dodgerblue">Meal Map 服務條款
+                            </a>並認可隱私政策。
+                        </p>
+
+                        <div class="clearfix">
+                            <button type="submit" class="signupbtn">立即註冊</button>
+                        </div>
+
+                        <div>
+                            <p class="p_tologin">已經有帳號了？<span class="tologin">點我登入</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+        <!-- 部落格內容 -->
+        <div class="blog_wrapper">
+            <!-- 上方 banner -->
+            <ul class="blog_top_banner">
+                <li>
+                    <a href="./blog/article_20230127.html">
+                    <img src="./source/img/blog/20230127_banner.png" alt="" class=""></a>
+                    <div class="blog_top_banner_content">
+                        <a href="./blog/article_20230127.html" class="blog_tag">冷知識</a>
+                        <h3>
+                            <a href="./blog/article_20230127.html">為什麼大部分貓咪不喜歡被摸手？肉球有什麼功能？竟然可以算命？！</a>
+                        </h3>
+                        <p>你以為貓咪的掌球長得都一個樣嗎？那可就大錯特錯囉！根據統計，貓咪的掌球形狀可以分成五大類呢！日本就有命理大師出了一本叫做「貓咪手相」的書...</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="./blog/article_20230201.html">
+                    <img src="./source/img/blog/20230201_banner.png" alt="" class=""></a>
+                    <div class="blog_top_banner_content">
+                        <a href="./blog/article_20230201.html" class="blog_tag">貓商品</a>
+                        <h3>
+                            <a href="./blog/article_20230201.html">感到壓力！貓大哥試躺肥美海豹玩偶，竟舒服到「直接撞臉」，網笑：最萌買家秀</a>
+                        </h3>
+                        <p>前陣子大阪海遊館以館內明星海豹為原型，推出了一款肥美海豹抱枕，日本有位貓飼主將海豹抱枕帶回家之後，竟讓自家平時的霸氣貓皇...</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="./blog/article_20230131.html">
+                    <img src="./source/img/blog/20230131_banner.png" alt="" class=""></a>
+                    <div class="blog_top_banner_content">
+                        <a href="./blog/article_20230131.html" class="blog_tag">去旅遊</a>
+                        <h3>
+                            <a href="">2023迎「貓年」！貓奴必訪的4個日本「療癒系貓城小鎮」</a>
+                        </h3>
+                        <p>日本從10多年前開始的貓咪熱潮引起龐大商機，連帶著許多貓比人多的小島也聲名大噪，吸引許多海內外觀光客前去造訪...</p>
+                    </div>
+                </li>
+                <li><a href="./blog/article_20230129.html">
+                    <img src="./source/img/blog/20230129_banner.png" alt="" class=""></a>
+                    <div class="blog_top_banner_content">
+                        <a href="./blog/article_20230129.html" class="blog_tag">獸醫說</a>
+                        <h3>
+                            <a href="./blog/article_20230129.html">貓狗大戰一觸即發，同居準則大公開！｜專業獸醫—李道絨</a>
+                        </h3>
+                        <p>很多喜歡動物的飼主家中會同時飼養汪星人及貓星人，有時候還會認為讓家中的毛寶貝多一個伴可以排解寂寞、增加新朋友...</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="./blog/article_20230130.html">
+                    <img src="./source/img/blog/20230130_banner.png" alt="" class=""></a>
+                    <div class="blog_top_banner_content">
+                        <a href="./blog/article_20230130.html" class="blog_tag">冷知識</a>
+                        <h3>
+                            <a href="./blog/article_20230130.html">你屬「喵星人」嗎？ 越南特有十二生肖「貓」取代「兔」</a>
+                        </h3>
+                        <p>兔年即將到來，台灣燈會的「兔」年燈飾，已經提早亮相，不過您知道嗎？在越南的文化裡，竟然沒有兔年，而是「貓」年...</p>
+                    </div>
+                </li>
+                <li><a href="./blog/article_20230128.html">
+                    <img src="./source/img/blog/20230128_banner.png" alt="" class=""></a>
+                    <div class="blog_top_banner_content">
+                        <a href="./blog/article_20230128.html" class="blog_tag">冷知識</a>
+                        <h3>
+                            <a href="./blog/article_20230128.html">你的貓跟你越來越像？科學研究：貓咪行為可以看出主人性格</a>
+                        </h3>
+                        <p>日本從10多年前開始的貓咪熱潮引起龐大商機，連帶著許多貓比人多的小島也聲名大噪，吸引許多海內外觀光客前去造訪...</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="./blog/article_20230127.html">
+                    <img src="./source/img/blog/20230127_banner.png" alt="" class=""></a>
+                    <div class="blog_top_banner_content">
+                        <a href="./blog/article_20230127.html" class="blog_tag">冷知識</a>
+                        <h3>
+                            <a href="./blog/article_20230127.html">為什麼大部分貓咪不喜歡被摸手？肉球有什麼功能？竟然可以算命？！</a>
+                        </h3>
+                        <p>你以為貓咪的掌球長得都一個樣嗎？那可就大錯特錯囉！根據統計，貓咪的掌球形狀可以分成五大類呢！日本就有命理大師出了一本叫做「貓咪手相」的書...</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="./blog/article_20230201.html">
+                    <img src="./source/img/blog/20230201_banner.png" alt="" class=""></a>
+                    <div class="blog_top_banner_content">
+                        <a href="./blog/article_20230201.html" class="blog_tag">貓商品</a>
+                        <h3>
+                            <a href="./blog/article_20230201.html">感到壓力！貓大哥試躺肥美海豹玩偶，竟舒服到「直接撞臉」，網笑：最萌買家秀</a>
+                        </h3>
+                        <p>前陣子大阪海遊館以館內明星海豹為原型，推出了一款肥美海豹抱枕，日本有位貓飼主將海豹抱枕帶回家之後，竟讓自家平時的霸氣貓皇...</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="./blog/article_20230131.html">
+                    <img src="./source/img/blog/20230131_banner.png" alt="" class=""></a>
+                    <div class="blog_top_banner_content">
+                        <a href="./blog/article_20230131.html" class="blog_tag">去旅遊</a>
+                        <h3>
+                            <a href="./blog/article_20230131.html">2023迎「貓年」！貓奴必訪的4個日本「療癒系貓城小鎮」</a>
+                        </h3>
+                        <p>日本從10多年前開始的貓咪熱潮引起龐大商機，連帶著許多貓比人多的小島也聲名大噪，吸引許多海內外觀光客前去造訪...</p>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- 下方 文章區 -->
+            <div class="blog_alsolike_wrapper">
+                <div class="blog_alsolike">
+                    <h2>熱門文章</h2>
+                    <ul>
+                        <!-- <li> -->
+                        <li>
+                            <div class="blog_alsolike_content" href="#">
+                                <h3>
+                                    <a href="./blog/article_20230130.html">你屬「喵星人」嗎？ 越南特有十二生肖「貓」取代「兔」</a>
+                                </h3>
+                                <p>兔年即將到來，台灣燈會的「兔」年燈飾，已經提早亮相，不過您知道嗎？在越南的文化裡，竟然沒有兔年，而是「貓」年，相傳是因為12生肖傳入越南時，子丑寅卯的「卯」字，發音像貓，因此誤傳至今，不過真的是這樣嗎？來聽越南人怎麼說...</p>
+                                <div class="blog_alsolike_content_tags">
+                                    <a href="#">冷知識</a>
+                                    <a href="#">Jan 30,2023</a>
+                                    <a href="#">
+                                        <i class="bi bi-eye-fill"></i>84K</a>
+                                </div>
+                            </div>
+                            <img src="./source/img/blog/20230130_article.png" alt="">
+                        </li>
+                        <li>
+                            <div class="blog_alsolike_content" href="#">
+                                <h3>
+                                    <a href="./blog/article_20230131.html">貓狗大戰一觸即發，同居準則大公開！｜專業獸醫—李道絨</a>
+                                </h3>
+                                <p>很多喜歡動物的飼主家中會同時飼養汪星人及貓星人，有時候還會認為讓家中的毛寶貝多一個伴可以排解寂寞、增加新朋友，但有時候我們都會忽略，對於新夥伴的加入，除了資源重新分配外還有許多特別要注意的事項，避免家中經常發生貓狗大戰！...</p>
+                                <div class="blog_alsolike_content_tags">
+                                    <a href="#">獸醫說</a>
+                                    <a href="#">Jan 29,2023</a>
+                                    <a href="#">
+                                        <i class="bi bi-eye-fill"></i>2141K</a>
+                                </div>
+                            </div>
+                            <img src="./source/img/blog/20230129_article.png" alt="">
+                        </li>
+                        <li>
+                            <div class="blog_alsolike_content" href="#">
+                                <h3>
+                                    <a href="./blog/article_20230128.html">你的貓跟你越來越像？科學研究：貓咪行為可以看出主人性格</a>
+                                </h3>
+                                <p>寵物行為專家 Lauren Finka 在調查訪問了超過 3,300 名貓咪飼養者後，在美國公共科學圖書館出版的學術期刊《PLOS
+                                    One》上發表了研究成果。結果表明，貓主人的性格、養育方式與貓咪的行為甚至健康之間有緊密關聯。她以心理學著名的「人格五因素模型（five-factor
+                                    model）」為基準，整理出貓咪行為與飼養者的性格、教養方式三者之間的關聯...</p>
+                                <div class="blog_alsolike_content_tags">
+                                    <a href="#">冷知識</a>
+                                    <a href="#">Jan 28,2023</a>
+                                    <a href="#">
+                                        <i class="bi bi-eye-fill"></i>25K</a>
+                                </div>
+                            </div>
+                            <img src="./source/img/blog/20230128_article.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+  <!-- footer -->
+  <footer>
+    <div class="footer_wrapper">
+        <div>
+            <h4>Amelie Kuo
+                <a
+                    href="mailto:amelie.chihyu.kuo@gmail.com?subject=來源：Mealmap_Project">amelie.chihyu.kuo@gmail.com</a>
+            </h4>
+        </div>
+        <div>
+            <p>緯育 TibaMe 前端工程師班第 82 期學員專題作品，本平台僅供學習、展示之用
+                <br>參考資源：
+
+                <a href="https://trello.com/" target="_blank">Trello</a>、<a
+                    href="https://www.arigatobank.com/index.html" target="_blank">arigatobank</a>、<a
+                    href="https://service.kateinoigaku.jp/index.html" target="_blank">みんなの家庭の医学</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+    <!-- fab_gototop -->
+    <div class="gototop">
+        <a id="myBtn" onclick="topFunction()">
+            <i class="bi bi-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- javascript -->
+    <script src="./js/jquery-3.6.3.min.js"></script>
+    <script src="./js/owl.carousel/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script type="text/javascript" src="./js/slick/slick.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.blog_top_banner').slick({
+                dots: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                centerMode: true,
+                variableWidth: true,
+                autoplay: true,
+                autoplaySpeed: 2000
+                
+            });
+            
+            /* $('.blog_top_banner').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                dots: true,
+                // speed: 300,
+                variableWidth: true,
+                centerMode: true,
+                autoplay: false,
+            }); */
+
+            /* $('.blog_top_banner').slick({
+                centerMode: true,
+                centerPadding: '0px',
+                slidesToShow: 3,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '0px',
+                            slidesToShow: 3
+                        }
+                    }, {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '0px',
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });*/
+
+        });
+
+        /*
+        $('.blog_top_banner').slick({     infinite: true,     slidesToShow: 3,
+        slidesToScroll: ,     dots: true,     }); {         setting - name: setting -
+        value     } */
+    </script>
+</body>
+</html>
