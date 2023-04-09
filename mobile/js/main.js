@@ -1,14 +1,26 @@
 // // nav
 // let mbNav = document.getElementById('mbNav');
 
-function myFunction() {
-    var x = document.getElementById("mbNav");
-    if (x.style.display === "block") {
-      x.style.display = "none";
-    } else {
-      x.style.display = "block";
-    }
-  }
+// function myFunction() {
+//     var x = document.getElementById("mbNav");
+//     if (x.style.display === "block") {
+//       x.style.display = "none";
+//     } else {
+//       x.style.display = "block";
+//     }
+//   }
+
+let burgerBtn = document.getElementById('burger')
+let mbNav = document.getElementById('mbNav');
+
+// burgerBtn.onclick = function () {
+//     mbNav.classList.add("menushow");
+//     mbNav.classList.add("menushow");
+//   };
+
+burgerBtn.addEventListener('click', () => {
+    mbNav.classList.toggle('open');
+});
 
 
 
