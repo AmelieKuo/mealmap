@@ -551,7 +551,7 @@ hr {
 
 .left_nav ul{
     pointer-events: auto;
-    display:none;
+    /* display:none; */
     position: absolute;
     top: 70px;
     left: 0px;
@@ -564,6 +564,20 @@ hr {
     /*max-height: 0px;    /*  隱藏選單高度 */
     /* overflow: hidden;   隱藏選單 */
     /* transition: max-height 1.5s;  // 選單下拉時的時間 */
+}
+
+#mbNav {
+    /* 打開時側邊欄的樣式 */
+    max-height: 0px;
+    display: none;
+    transition: 1.5s;
+}
+
+#mbNav.open {
+    /* 打開時側邊欄的樣式 */
+    max-height: 500px; 
+    transition: 1.5s;
+    display: block;
 }
 
 .left_nav li{
