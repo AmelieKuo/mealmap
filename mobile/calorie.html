@@ -17,65 +17,66 @@
     </head>
     <body>
 
- <!-- navbar -->
- <nav class="header" id="header">
-    <div class="nav_center">
-        <div class="left_nav">
-            <i class="bi bi-list" onclick="myFunction()";></i>
-            <a href="./index.html" class="navlogo">
-                <img class="logo_pc" src="./source/img/logo.svg" alt="MealMap_Logo">
-                <img class="logo_mb" src="./source/img/logo_m.svg" alt="MealMap_Logo"></a>
-            <ul id="mbNav" class="mbNav_ul">
-                <li class="Main_LeftListLiSelector">
-                    <a href="#">營養查詢
-                        <i class="bi bi-chevron-down"></i>
-                    </a>
+    <!-- navbar -->
+    <nav class="header" id="header">
+        <div class="nav_center">
+            <div class="left_nav">
+                <!-- <i class="bi bi-list burgar_btn" onclick="document.getElementById('mbNav').style.display='block'";></i> -->
+                <i class="bi bi-list burgar_btn" id="burger"></i>
+                <a href="./index.html" class="navlogo">
+                    <img class="logo_pc" src="./source/img/logo.svg" alt="MealMap_Logo">
+                    <img class="logo_mb" src="./source/img/logo_m.svg" alt="MealMap_Logo"></a>
+                <ul id="mbNav" class="mbNav_ul menu">
+                    <li class="Main_LeftListLiSelector">
+                        <a href="#">營養查詢
+                            <i class="bi bi-chevron-down"></i>
+                        </a>
 
-                    <!-- 子選單 -->
-                    <ol class="menu_dropdown item1">
-                        <li>
-                            <a href="./nutrition_query.html">依品牌搜尋</a>
-                        </li>
-                        <li>
-                            <a href="./app_ai.html">掃描辨識</a>
-                        </li>
-                    </ol>
-                </li>
-                <li class="Main_LeftListLiSelector">
-                    <a href="#">飲食計畫
-                        <i class="bi bi-chevron-down"></i>
-                    </a>
+                        <!-- 子選單 -->
+                        <ol class="menu_dropdown item1">
+                            <li>
+                                <a href="./nutrition_query.html">依品牌搜尋</a>
+                            </li>
+                            <li>
+                                <a href="./app_ai.html">掃描辨識</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li class="Main_LeftListLiSelector">
+                        <a href="#">飲食計畫
+                            <i class="bi bi-chevron-down"></i>
+                        </a>
 
-                    <!-- 子選單 -->
-                    <ol class="menu_dropdown item2">
-                        <li>
-                            <a href="./calorie.html">熱量 / 飲水量計算</a>
-                        </li>
-                        <li>
-                            <a href="./app_record.html">飲食紀錄</a>
-                        </li>
-                    </ol>
+                        <!-- 子選單 -->
+                        <ol class="menu_dropdown item2">
+                            <li>
+                                <a href="./calorie.html">熱量 / 飲水量計算</a>
+                            </li>
+                            <li>
+                                <a href="./app_record.html">飲食紀錄</a>
+                            </li>
+                        </ol>
 
-                </li>
-                <li>
-                    <a href="./plans.html">方案</a>
-                </li>
-                <li>
-                    <a href="./blog.html">部落格</a>
-                </li>
-                <li class="mb_right_nav">
-                    <a href="#" onclick="document.getElementById('signup_overlay').style.display='block'" style="width:auto;">註冊
-                        / 登入</a>
-                </li>
-            </ul>
+                    </li>
+                    <li>
+                        <a href="./plans.html">方案</a>
+                    </li>
+                    <li>
+                        <a href="./blog.html">部落格</a>
+                    </li>
+                    <li class="mb_right_nav">
+                        <a href="#" onclick="document.getElementById('signup_overlay').style.display='block'" style="width:auto;">註冊
+                            / 登入</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right_nav">
+                <!-- <button class="header_navigation_sign-up">註冊 / 登入</button> -->
+                <button onclick="document.getElementById('signup_overlay').style.display='block'" style="width:auto;">註冊
+                    / 登入</button>
+            </div>
         </div>
-        <div class="right_nav">
-            <!-- <button class="header_navigation_sign-up">註冊 / 登入</button> -->
-            <button onclick="document.getElementById('signup_overlay').style.display='block'" style="width:auto;">註冊
-                / 登入</button>
-        </div>
-    </div>
-</nav>
+    </nav>
 
 <!-- 註冊視窗 -->
 <div id="signup_overlay" class="modal">
