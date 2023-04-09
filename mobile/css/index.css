@@ -668,7 +668,7 @@
     flex-direction: column;
 }
 
-.article1_mb{
+.article_content .article1_mb{
     display: none;
 }
 
@@ -686,6 +686,10 @@
     overflow: hidden;
 
     position: relative;
+}
+
+.article1_mb{
+ display:none;
 }
 
 .article_content li:hover{
