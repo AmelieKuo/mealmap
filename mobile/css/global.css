@@ -494,6 +494,9 @@ hr {
 /*---------- 螢幕小於 428px 時 ----------*/
 @media screen and (max-width: 428px){
 
+body{
+    overflow: hidden;
+}
 
 /* nav */
 /* ------------- 主選單 ------------- */
