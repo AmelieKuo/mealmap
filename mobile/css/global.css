@@ -234,6 +234,7 @@ footer p{
     padding: 1px 10px;
     width: 500px;
     font-size: 8px;
+    
 }
 
 footer a{
@@ -514,6 +515,7 @@ body{
     width: 100%;
     padding: 0 7px;
     background: #ffff;
+    box-sizing: border-box;
 }
 
 .left_nav .bi-list {
@@ -662,8 +664,9 @@ footer{
 }
 
 .footer_wrapper{
+    box-sizing: border-box;
     height: 100%;
-    width: auto;
+    width: 100%;
 
     display: flex;
     flex-direction: column;
@@ -676,6 +679,10 @@ footer{
     margin-right: 0;
     padding: 0px;
     position: static;
+}
+
+.footer_wrapper div:first-child:after{
+    content: "";
 }
 
 footer h4{
@@ -692,9 +699,10 @@ footer h4 a{
 
 footer p{
     font-size: 12px;
-    /* -webkit-transform:scale(0.5); */
-    padding: 0px;
+    -webkit-transform:scale(0.5);
+    padding: 0 5px;
     width: auto;
+    overflow-wrap: break-word;
 }
 
 /* 註冊彈窗 */
@@ -865,7 +873,7 @@ input[type=text], input[type=password] {
     z-index: 15; /* Sit on top */
     left: 0;
     top: 0;
-    width: auto; /* Full width */
+    max-width: 428px; /* Full width */
     height: auto; /* Full height */
     overflow: hidden; /* Enable scroll if needed */
     background-color: rgba(0, 0, 0, .6);
@@ -878,7 +886,7 @@ input[type=text], input[type=password] {
     margin: 0 auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
     border-radius: 20px;
-    width: 85%; /* Could be more or less, depending on screen size */
+    width: 80%; /* Could be more or less, depending on screen size */
   
     overflow: hidden;
   }

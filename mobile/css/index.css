@@ -1091,8 +1091,9 @@ p{
 }
 
 .feature{
-    width: 88%;
-    padding: 25px;
+    width: 100%;
+    padding: 25px 15px;
+    box-sizing: border-box;
 }
 
 .feature h2{
@@ -1144,11 +1145,12 @@ p{
 
     padding: 11px;
     border-radius: 3px;
-    box-shadow: 0 12px 70px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 5px 5px 7px 0px rgba(0, 0, 0, 0.05);
     border: solid 1px #ffff;
     background: #ffff;;
 
     border-left: solid 6px #cfbae1;
+    margin-right: 8px;
 }
 
 .swiper-slide h4{
@@ -1387,7 +1389,8 @@ p{
 
 .article{
     width: 100%;
-    padding: 44px 17px;
+    padding: 44px 5px;
+    box-sizing: border-box;
 }
 
 .article h2{
@@ -1415,7 +1418,7 @@ p{
 
 
 .article_content{
-    width: 90%;
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -1426,7 +1429,8 @@ p{
 }
 
 .article_content ul{
-    width: 100%;
+    width: 95%;
+    padding: 0 5px;
 
     display: flex;
     flex-direction: column;
@@ -1485,9 +1489,10 @@ p{
 }
 
 .faq{
-    width: 394px;
-    padding: 0 17px;
-    margin: 0;
+    width: 95%;
+    padding: 0 5px;
+    margin: auto;
+    box-sizing: border-box;
 }
 
 .faq h2{
@@ -1511,7 +1516,7 @@ p{
 }
 
 .accordion {
-    width: 98%;
+    width: 100%;
     font-size: 15px;
     flex-wrap: wrap;
   }
@@ -1541,7 +1546,7 @@ p{
   }
   
   .panel {
-    width: 98%;
+    width: 100%;
     padding: 25px 0;
     display: none;
     background-color: #F2EBFD;
