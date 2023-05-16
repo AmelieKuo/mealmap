@@ -260,4 +260,8 @@ body{
 
         clip-path: inset(0% 0.5px 0% 0% round 35px);
     }
+
+    .app_wrapper{
+        height: auto;   
+    }
 }
