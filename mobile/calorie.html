@@ -78,9 +78,10 @@
         </div>
     </nav>
 
-<!-- 註冊視窗 -->
-<div id="signup_overlay" class="modal">
-    <form class="modal-content" action="/action_page.php">
+ <!-- 註冊視窗 -->
+ <div id="signup_overlay" class="modal">
+    <!-- <form class="modal-content" action="/action_page.php"> -->
+    <form class="modal-content">
         <div class="container">
             <span onclick="document.getElementById('signup_overlay').style.display='none'" class="close"
                 title="Close Modal">&times;</span>
@@ -152,9 +153,9 @@
 
                     <div class="calorie_enter">
                         <h3>
-                            體重 ( kg )
+                            體重 ( kg ) <span id="weightError" class="error-message">請輸入數字！</span>
                         </h3>
-                        <input placeholder="請輸入公斤" type="text" id="weight" name="weight" onchange="calculateTotal()">
+                        <input placeholder="請輸入公斤" type="text" id="weight" name="weight" maxlength=2 oninput="validateInput()" onchange="calculateTotal()">
 
                         <h3>貓咪類型</h3>
                         <select
@@ -164,16 +165,15 @@
                             class="field small"
                             onchange="calculateTotal()">
 
-                            <option value="1.4" vt="成貓｜已節紮">成貓｜已結紮</option>
+                            <option value="0" disabled>請選擇</option>
+                            <option value="1.4" vt="成貓｜已節紮" selected>成貓｜已結紮</option>
                             <option value="1.2" vt="成貓｜未結紮">成貓｜未結紮</option>
                             <option value="1" vt="成貓｜活動量大">成貓｜活動量大</option>
                             <option value="1" vt="成貓｜活動量小" data-i="0.8">成貓｜活動量小</option>
                             <option value="0.3" vt="成貓｜需減肥的">成貓｜需減肥的</option>
                             <option value="1.6" vt="成貓｜過瘦的">成貓｜過瘦的</option>
 
-                            <option
-                                value=" - - - - - - - - - - - - - - - - "
-                                vt=" - - - - - - - - - - - - - - - - ">
+                            <option disabled>
                                 - - - - - - - - - - - - - - - -
                             </option>
 
@@ -181,18 +181,14 @@
                             <option value="4" vt="母貓｜懷孕期">母貓｜懷孕期</option>
                             <option value="1.1" vt="母貓｜哺乳期">母貓｜哺乳期</option>
 
-                            <option
-                                value="  - - - - - - - - - - - - - - - - "
-                                vt="  - - - - - - - - - - - - - - - - ">
+                            <option disabled>
                                 - - - - - - - - - - - - - - - -
                             </option>
 
                             <option value="1.14" vt="高齡貓｜已結紮 ( 七歲以上 )">高齡貓｜已結紮 ( 七歲以上 )</option>
                             <option value="1.33" vt="高齡貓｜未結紮 ( 七歲以上 )">高齡貓｜未結紮 ( 七歲以上 )</option>
 
-                            <option
-                                value="  - - - - - - - - - - - - - - - - "
-                                vt="  - - - - - - - - - - - - - - - - ">
+                            <option disabled>
                                 - - - - - - - - - - - - - - - -
                             </option>
 
@@ -241,7 +237,6 @@
 
         <!-- javascript -->
         <script type="text/javascript" src="./js/main.js"></script>
-        <script src="jquery.min.js"></script>
 
     </body>
 </html>

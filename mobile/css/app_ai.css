@@ -18,7 +18,7 @@ body{
     background-size: 30% ,cover;
 
     z-index: 0;
-    /* height: calc(100vh - 60px); */
+    height: calc(100vh - 60px - 70px);
     padding: 0px;
 
 }
@@ -131,7 +131,7 @@ body{
     display: block;
     width: 35%;
 
-    clip-path: inset(0% 0.5px 0% 0% round 45px);"
+    clip-path: inset(0% 0.5px 0% 0% round 45px);
 }
 
 
@@ -258,6 +258,6 @@ body{
         display: block;
         width: 100%;
 
-        clip-path: inset(0% 0.5px 0% 0% round 35px);"
+        clip-path: inset(0% 0.5px 0% 0% round 35px);
     }
 }

@@ -182,6 +182,10 @@
     color: #164c4f;
 }
 
+.hidden-text p, .hidden-text i, .hidden-text div {
+    display: none;
+}
+
 @media screen and (max-width: 428px){
 
     .article_wrapper{
@@ -335,7 +339,7 @@
     .article_alsolike img{
         width: 100%;
         display: block;
-        height: auto%;
+        height: auto;
     }
     
     .article_alsolike h3{

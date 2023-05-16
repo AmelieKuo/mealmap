@@ -8,6 +8,7 @@
     <title>Meal Map 智慧掌握貓的健康｜AI辨識營養成分、紀錄每日飲食狀況、計算熱量與飲水量，免費最適合新手貓奴適用</title>
     <meta name="description" content="最適合養貓新手的App，隨時掌握貓咪健康狀況" />
     <meta property="og:image" content="https://ameliekuo.github.io/tibame/pc/mealmap/source/img/home/1_cat.png" />
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="icon" href="./source/img/favicon.ico" type="image/x-icon">
@@ -90,7 +91,8 @@
 
     <!-- 註冊視窗 -->
     <div id="signup_overlay" class="modal">
-        <form class="modal-content" action="/action_page.php">
+        <!-- <form class="modal-content" action="/action_page.php"> -->
+        <form class="modal-content">
             <div class="container">
                 <span onclick="document.getElementById('signup_overlay').style.display='none'" class="close"
                     title="Close Modal">&times;</span>
@@ -445,12 +447,12 @@
                 <p>Meal Map 目前提供體驗版供所有人免費試用部分功能，進階服務目前需訂閱升級才能操作，目前付費功能無試用方案</p>
             </div>
 
-            <button class="accordion">
+            <button class="accordion faq_btn5">
                 <div>05</div>
                 <h4>Meal Map 有多國語言版本嗎？</h4>
                 <i class="bi bi-plus-circle-fill"></i>
             </button>
-            <div class="panel faq_btn5">
+            <div class="panel faq_ans5">
                 <p>Meal Map 目前支援繁體中文、英文介面（*部分功能目前僅提供繁體中文）</p>
             </div>
         </div>

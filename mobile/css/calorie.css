@@ -55,7 +55,7 @@
     overflow: hidden;
 }
 
-h1{
+.calorie_wrapper h1{
     padding-top: 190px;
     padding-bottom: 50px;
     font-size: 45px;
@@ -78,7 +78,7 @@ h1{
     background-color: #ddf0f1;
 }
 
-h3{
+.calorie_wrapper h3{
     font-size: 20px;
     font-weight: 500;
     line-height: 2;
@@ -98,7 +98,7 @@ h3{
     font-size: 18px;
 }
 
-h2{
+.calorie_wrapper h2{
     font-size: 25px;
     font-weight: 500;
     line-height: 2;
@@ -116,6 +116,12 @@ select{
 
     font-size: 18px;
     color: #b57be7;
+
+    /* appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url("custom-arrow.png") no-repeat right center;
+    padding-right: 20px; */
 }
 
 select option{
@@ -134,6 +140,12 @@ select option{
     color: #cfbae1;
     font-size: 18px;
   }
+
+.error-message{
+    font-size: 16px;
+    color: red;
+    display: none;
+}
 
 @media screen and (max-width: 428px){
 
@@ -182,7 +194,7 @@ select option{
         height: auto;
     }
     
-    h1{
+    .calorie_wrapper h1{
         padding-top: 120px;
         padding-bottom: 50px;
         font-size: 32px;
@@ -202,7 +214,7 @@ select option{
         background-color: #ddf0f1;
     }
     
-    h3{
+    .calorie_wrapper h3{
         font-size: 18px;
     }
     
@@ -210,7 +222,7 @@ select option{
         font-size: 16px;
     }
     
-    h2{
+    .calorie_wrapper h2{
         font-size: 18px;
     }
     

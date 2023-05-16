@@ -797,6 +797,14 @@
     border-radius: 0 0 30px 30px;
   }
 
+  .active:not(.faq_btn1){
+    border-radius: 0 0 0 0;
+  }
+
+  .faq_ans5{
+    border-radius: 0 0 30px 30px;
+  }
+
   .accordion > div{
     flex-grow: 1;
    
@@ -855,8 +863,8 @@
     background-color: #F2EBFD;
   }
 
-  .active:after {
-    content: "";
+  .active i::before {
+    /* content: ""; */
     transform: rotate(45deg);
   }
   
@@ -880,6 +888,8 @@
     background-image: url('../source/img/home/7_bg.png');
     background-repeat: no-repeat;
     background-position: left;
+
+    height: calc(100vh - 60px - 70px);
 }
 
 .cta{
@@ -1628,7 +1638,7 @@ p{
     right: 20%;
     top: 16px;
 
-    -webkit-mask-image:-webkit-gradient(linear, left 50%, left 100%, from(rgba(0,0,0,1)), to(rgba(0,0,0,1)));
+    -webkit-mask-image: -webkit-gradient(linear, left 50%, left 100%, from(rgba(0,0,0,1)), to(rgba(0,0,0,1)));
 }
 
 }

@@ -1,4 +1,4 @@
-@import url(./global.css);
+@import url('global.css');
 
 .nut_wrapper{
     width: 100%;
@@ -113,6 +113,10 @@ span ~ #tab > div:first-of-type,
 
 span {
     display: none;
+}
+
+.close{
+    display: block;
 }
 
 .tab-content{

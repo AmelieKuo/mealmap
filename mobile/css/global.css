@@ -144,7 +144,7 @@ ol{
   
   /* ------------- hover & show ------------- */
   
-  ul li a > i :hover{
+  ul li:hover a .bi-chevron-down::before{
     transform: rotate(180deg);
   }
 
@@ -330,6 +330,8 @@ input[type=text]:focus, input[type=password]:focus {
   background: -o-linear-gradient(#eae0f4ed,#cfbae1ed);
   background: -moz-linear-gradient(#eae0f4ed,#cfbae1ed);
   background: linear-gradient(#eae0f4ed,#cfbae1ed);
+
+  min-height: 70vh;
 
   /* linear-gradient(359deg, #cfbae1 64%, rgba(207, 186, 225, 0.25) 0%); */
 }

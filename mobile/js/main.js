@@ -1,59 +1,3 @@
-// // nav
-// let mbNav = document.getElementById('mbNav');
-
-// function myFunction() {
-//     var x = document.getElementById("mbNav");
-//     if (x.style.display === "block") {
-//       x.style.display = "none";
-//     } else {
-//       x.style.display = "block";
-//     }
-//   }
-
-let burgerBtn = document.getElementById('burger')
-let mbNav = document.getElementById('mbNav');
-
-// burgerBtn.onclick = function () {
-//     mbNav.classList.add("menushow");
-//     mbNav.classList.add("menushow");
-//   };
-
-burgerBtn.addEventListener('click', () => {
-    mbNav.classList.toggle('open');
-});
-
-
-
-// 第二屏
-// 點選按鈕選擇圖片
-(function(){
-
-    document.getElementById('btn1').addEventListener('click', function(){
-      document.getElementById('feature_img').style.left = 0 +'px',
-      document.getElementById('feature_img').style.transition = 0.3; +'s';
-    });
-    document.getElementById('btn2').addEventListener('click', function(){
-      document.getElementById('feature_img').style.left = -705 +'px',
-      document.getElementById('feature_img').style.transition = 0.3; +'s';
-    });
-    document.getElementById('btn3').addEventListener('click', function(){
-      document.getElementById('feature_img').style.left = -1410 +'px',
-      document.getElementById('feature_img').style.transition = 0.3; +'s';
-    });
-
-})();
-
-
-// document.getElementById('feature_img').style.transition = all + '0.6s';
-
-
-//點選按鈕出現按鈕樣式
-$('#navigation li').click(function() {
-    $('#navigation li').removeClass('.btn_selected');
-    $(this).addClass('selected');
-});
-
-
 
 // global  --------  -------- 
 
@@ -71,19 +15,17 @@ function scrollFunction() {
     } else {
         mybutton.style.display = "none";
     }
-}
+};
 
-// When the user clicks on the button, scroll to the top of the document
+// 點選 to top button
 function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-}
+};
 
-// 印出scrolltop高度
+// scrolltop高度
 let heightTop = document.documentElement.scrollTop || document.body.scrollTop;
-console.log(heightTop);
-
-
+// console.log(heightTop);
 
 /* Header show & hide */
 let bodyClass = document.body.classList,
@@ -100,44 +42,6 @@ window.addEventListener('scroll', function(){
     lastScrollY = st;
 });
 
-
-
-
-// index.html  --------  -------- 第二屏 right_img.sprite
-// 第四屏 faq
-let acc = document.getElementsByClassName("accordion");
-let i;
-
-for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
-        this
-            .classList
-            .toggle("active",);
-        let panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-        } else {
-            panel.style.display = "block";
-        }
-    });
-}
-
-// var acc = document.getElementsByClassName("accordion");
-// var i;
-
-// for (i = 0; i < acc.length; i++) {
-//   acc[i].addEventListener("click", function() {
-//     this.classList.toggle("active");
-//     var panel = this.nextElementSibling;
-//     if (panel.style.maxHeight) {
-//       panel.style.maxHeight = null;
-//     } else {
-//       panel.style.maxHeight = panel.scrollHeight + "px";
-//     } 
-//   });
-// }
-
-
 // Get the modal
 var modal = document.getElementById('signup_overlay');
 
@@ -146,60 +50,110 @@ window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
-}
+};
 
-// 登入介面 還沒有帳號?點此註冊 關閉當前視窗
-$(".tosignup").on("click", function () {
-    $(".login_overlay").fadeOut();
-});
 
-// 登入介面 還沒有帳號?點此註冊 開啟註冊視窗
-$(".tosignup").on("click", function () {
-    $(".signup_overlay").fadeIn();
-});
+// index.html  --------  -------- 
+// 第一屏
+// nav
 
-// 註冊介面 已有帳號?點此登入 關閉當前視窗
-$(".tologin").on("click", function () {
-    $(".signup_overlay").fadeOut();
-});
+let burgerBtn = document.getElementById('burger')
+let mbNav = document.getElementById('mbNav');
 
-// 註冊介面 已有帳號?點此登入 開啟註冊視窗
-$(".tologin").on("click", function () {
-    $(".login_overlay").fadeIn();
+burgerBtn.addEventListener('click', () => {
+    mbNav.classList.toggle('open');
 });
 
 
-// calorie.html --------  -------- 貓咪熱量、飲水量計算
+
+// 第二屏
+// 第二屏 right_img.sprite
+// 點選按鈕選擇圖片
+let featureImg = document.getElementById('feature_img');
+let btn1 = document.getElementById('btn1');
+let btn2 = document.getElementById('btn2');
+let btn3 = document.getElementById('btn3');
+
+if (featureImg && btn1 && btn2 && btn3) {
+  btn1.addEventListener('click', function() {
+    featureImg.style.left = '0';
+    featureImg.style.transition = '0.3s';
+  });
+
+  btn2.addEventListener('click', function() {
+    featureImg.style.left = '-705px';
+    featureImg.style.transition = '0.3s';
+  });
+
+  btn3.addEventListener('click', function() {
+    featureImg.style.left = '-1410px';
+    featureImg.style.transition = '0.3s';
+  });
+};
+
+
+
+// 第四屏 faq
+let questions = document.getElementsByClassName("accordion");
+
+for (let i = 0; i < questions.length; i++) {
+  questions[i].addEventListener("click", function() {
+    // 移除其他問題的 .active 類別
+    for (let j = 0; j < questions.length; j++) {
+      if (i !== j) {
+        questions[j].classList.remove("active");
+        questions[j].nextElementSibling.style.display = "none";
+      }
+    }
+
+    // 切換當前問題的 .active 類別
+    this.classList.toggle("active");
+
+    // 切換顯示/隱藏下一個元素
+    let panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+};
+
+
+// calorie.html --------  -------- 
+// 計算貓咪熱量、飲水量計算
+
+function validateInput() {
+    let weightInput = document.getElementById("weight");
+    let weightValue = weightInput.value.trim();
+    let weightError = document.getElementById("weightError");
+  
+    if (!/^\d+$/.test(weightValue)) {
+      weightError.style.display = "inline-block";
+      weightInput.value = "";
+    } else {
+      weightError.style.display = "none";
+    }
+};
+
+
 function calculateTotal() {
-    var weight = document
-        .getElementById("weight")
-        .value;
-    var cat_type = document
-        .getElementById("cat_type")
-        .value;
-    var calories = (70 * Math.pow(weight, 0.75) * cat_type);
-    document
-        .getElementById("calories")
-        .value = Math.round(calories) + ' kcal';
+    let weight = document.getElementById("weight").value;
+    let cat_type = document.getElementById("cat_type").value;
+    let calories = (70 * Math.pow(weight, 0.75) * cat_type);
+    
+    console.log("熱量：" + "70 * " + "(" + weight + " ** 0.75) * " + cat_type);
+
+    document.getElementById("calories").value = Math.round(calories) + ' kcal';
     waterTotal();
-}
+};
 
 function waterTotal() {
-    var weight = document
-        .getElementById("weight")
-        .value;
-    var water = weight * 60;
-    document
-        .getElementById("water")
-        .value = (water) + ' ml';
-}
+    let weight = document.getElementById("weight").value;
+    let water = weight * 60;
 
+    console.log("飲水量：" + weight +" * 60");
 
-// nav 選單點選顏色改變
-let Main_LeftListLiSelector = $("#Main_LeftListLiSelector li a");
-
-$(Main_LeftListLiSelector).on('click', function() {
-  $(Main_LeftListLiSelector).removeClass('active');
-  $(this).addClass('active');
-});
+    document.getElementById("water").value = (water) + ' ml';
+};
 
