@@ -889,7 +889,7 @@
     background-repeat: no-repeat;
     background-position: left;
 
-    height: calc(100vh - 60px - 70px);
+    height: calc(100vh - 90px);
 }
 
 .cta{
@@ -1611,6 +1611,11 @@ p{
 
 .store a img{
     width: 100%;
+}
+
+.cta_wrapper{
+
+    height: auto;
 }
 
 .cta_img{
